@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     
     //Homepage Variables
     var movieTitle: String = "Twenty Five Twenty One"
-    var movieDescription: String = "In a time when dreams seem out of reach, a teen fencer pursues big ambitions and meets a hardworking young man who seeks to rebuild his life."
+    var movieDescription: String = "In a time when dreams seem out of reach, a teen fencer pursues big ambitions and meets a hardworking young man who seeks to rebuild his lifess."
     
     //Outlet
     @IBOutlet weak var imageBackground: UIImageView!
