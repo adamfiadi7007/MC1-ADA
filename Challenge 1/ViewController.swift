@@ -7,11 +7,31 @@
 
 import UIKit
 
+struct Movie {
+    var movieTitle: String?
+    var movieDescription: String?
+    var movieInfoYear: String?
+    var movieInfoRating: String?
+    var movieInfoSeason: String?
+}
+
+struct movieHome {
+    
+    func getMovie() -> [Movie] {
+        return [Movie(movieTitle: "Twenty Five Twenty One", movieDescription: "In a time who dreams seem out of reach, a teen fencer pursues big ambitions and meets a hardworking young man who seeks to rebuild his life", movieInfoYear: "2022", movieInfoRating: "13+", movieInfoSeason: "Season 1")]
+    }
+    
+}
+
 class ViewController: UIViewController {
     
-    //Homepage Variables
-    var movieTitle: String = "Twenty Five Twenty One"
-    var movieDescription: String = "In a time who dreams seem out of reach, a teen fencer pursues big ambitions and meets a hardworking young man who seeks to rebuild his lifess."
+    /// Data
+    var getMovies = movieHome()
+    var arrOfMovie: [Movie] = []
+    
+//    //Homepage Variables
+//    var movieTitle: String = "Twenty Five Twenty One"
+//    var movieDescription: String = "In a time who dreams seem out of reach, a teen fencer pursues big ambitions and meets a hardworking young man who seeks to rebuild his lifess."
     
     //Outlet
     @IBOutlet weak var imageBackground: UIImageView!
@@ -21,6 +41,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var addText: UILabel!
     @IBOutlet weak var watchedText: UILabel!
     @IBOutlet weak var movieDescriptionText: UILabel!
+    @IBOutlet weak var movieInfoYears: UILabel!
+    @IBOutlet weak var movieInfoRatings: UILabel!
+    @IBOutlet weak var movieInfoSeasons: UILabel!
+    
     
     // Data Control
     var booked: Bool = false
@@ -30,8 +54,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        movieTitleHome.text = movieTitle
-        movieDescriptionText.text = movieDescription
+        arrOfMovie = getMovies.getMovie()
+        print(arrOfMovie)
+        
+        movieTitleHome.text = arrOfMovie[0].movieTitle
+        movieInfoYears.text = arrOfMovie[0].movieInfoYear
+        movieInfoRatings.text = arrOfMovie[0].movieInfoRating
+        movieInfoSeasons.text = arrOfMovie[0].movieInfoSeason
+        movieDescriptionText.text = arrOfMovie[0].movieDescription
+        
+//        movieTitleHome.text = movieTitle
+//        movieDescriptionText.text = movieDescription
     }
 
 

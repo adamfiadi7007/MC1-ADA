@@ -14,6 +14,7 @@
 		364EFDE327FC2D3800779EB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 364EFDE227FC2D3800779EB7 /* Assets.xcassets */; };
 		364EFDE627FC2D3800779EB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 364EFDE427FC2D3800779EB7 /* LaunchScreen.storyboard */; };
 		364EFDF827FD493E00779EB7 /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EFDF727FD493E00779EB7 /* searchViewController.swift */; };
+		364EFDFC27FEBF2800779EB7 /* ModallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EFDFB27FEBF2800779EB7 /* ModallyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		364EFDE527FC2D3800779EB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		364EFDE727FC2D3800779EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		364EFDF727FD493E00779EB7 /* searchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
+		364EFDFB27FEBF2800779EB7 /* ModallyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModallyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 		364EFDCD27FC2D3700779EB7 = {
 			isa = PBXGroup;
 			children = (
+				364EFDFB27FEBF2800779EB7 /* ModallyViewController.swift */,
 				364EFDD827FC2D3700779EB7 /* Challenge 1 */,
 				364EFDD727FC2D3700779EB7 /* Products */,
 			);
@@ -145,6 +148,7 @@
 				364EFDDA27FC2D3700779EB7 /* AppDelegate.swift in Sources */,
 				364EFDF827FD493E00779EB7 /* searchViewController.swift in Sources */,
 				364EFDDC27FC2D3700779EB7 /* SceneDelegate.swift in Sources */,
+				364EFDFC27FEBF2800779EB7 /* ModallyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
