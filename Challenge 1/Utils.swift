@@ -14,7 +14,7 @@ struct Utils{
         var arrOfData : [Datas] = []
         
         let options = CSVReadingOptions(hasHeaderRow: true, delimiter: ",")
-        guard let fileUrl = Bundle.main.path(forResource: "movie_details", ofType: "csv") else{ return }
+        guard let fileUrl = Bundle.main.url(forResource: "movie_details", withExtension: "csv") else{ return [] }
         let dataFrame = try! DataFrame(contentsOfCSVFile: fileUrl, options: options)
 
         
@@ -39,7 +39,6 @@ struct Utils{
             
             arrOfData.append(data)
         }
-        
-//        var data
+        return arrOfData
     }
 }

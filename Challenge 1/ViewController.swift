@@ -50,7 +50,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         //retrieve csv
-        utils.retrieve_data()
+        let data = utils.retrieve_data()
+        print(data[0])
         
         // Do any additional setup after loading the view.
         
