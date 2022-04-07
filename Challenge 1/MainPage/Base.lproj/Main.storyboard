@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qr3-cO-nrW">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -38,17 +38,35 @@
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CTr-3r-3nb"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dDh-Ol-1OX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1611" y="77"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ccm-VJ-hwv">
+            <objects>
+                <viewController id="CBH-Hb-jO1" customClass="ViewController" customModule="Challenge_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OkM-eR-pV4">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="hm9-3X-3tm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6C2-SP-1ck" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-290" y="-661"/>
         </scene>
         <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Challenge_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-img-home" translatesAutoresizingMaskIntoConstraints="NO" id="l47-8a-BkZ">
@@ -57,8 +75,8 @@
                                     <constraint firstAttribute="height" constant="869" id="bgY-VQ-eCM"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="bg-img-home" translatesAutoresizingMaskIntoConstraints="NO" id="cTi-x9-2ey">
-                                <rect key="frame" x="-8" y="3" width="422" height="869"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-img-home" translatesAutoresizingMaskIntoConstraints="NO" id="cTi-x9-2ey">
+                                <rect key="frame" x="-8" y="47" width="422" height="869"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="869" id="o3o-kt-AKJ"/>
                                 </constraints>
@@ -150,9 +168,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="cTi-x9-2ey" secondAttribute="trailing" constant="-40" id="V7h-kI-EEL"/>
                             <constraint firstItem="l47-8a-BkZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-34" id="WDd-UF-SzS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="l47-8a-BkZ" secondAttribute="trailing" constant="-30" id="bmk-DU-HMe"/>
+                            <constraint firstItem="cTi-x9-2ey" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-41" id="cFT-rz-1GT"/>
                             <constraint firstItem="l47-8a-BkZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-7" id="sUs-Ra-hi8"/>
+                            <constraint firstItem="cTi-x9-2ey" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-24" id="zwH-9j-Icb"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Akc-br-KW5"/>
@@ -176,7 +197,7 @@
         <!--Item-->
         <scene sceneID="Kq5-y8-vQA">
             <objects>
-                <viewController id="Y9T-8r-X4R" customClass="ViewController" customModule="Challenge_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y9T-8r-X4R" customClass="searchViewController" customModule="Challenge_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rjz-s4-Lao">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -187,8 +208,8 @@
                                     <constraint firstAttribute="height" constant="869" id="etW-tx-96c"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Apa ini" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vc-Lv-drK">
-                                <rect key="frame" x="114" y="409" width="88" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vc-Lv-drK">
+                                <rect key="frame" x="114" y="409" width="162" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -213,7 +234,7 @@
         <!--Item-->
         <scene sceneID="mip-8n-WWw">
             <objects>
-                <viewController id="51d-bX-PLa" customClass="ViewController" customModule="Challenge_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="51d-bX-PLa" customClass="watchListViewController" customModule="Challenge_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UWM-iK-IIy">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -295,8 +316,8 @@
                                     <constraint firstAttribute="height" constant="869" id="sO7-cl-pWF"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="bg-img-home" translatesAutoresizingMaskIntoConstraints="NO" id="NnX-Sq-fch">
-                                <rect key="frame" x="-8" y="3" width="422" height="869"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-img-home" translatesAutoresizingMaskIntoConstraints="NO" id="NnX-Sq-fch">
+                                <rect key="frame" x="-8" y="47" width="422" height="869"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="869" id="Eti-iI-fCz"/>
                                 </constraints>
@@ -306,7 +327,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="omh-iq-Bf8" secondAttribute="trailing" constant="-30" id="8WN-DP-uvW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NnX-Sq-fch" secondAttribute="trailing" constant="-40" id="BGy-b3-IgZ"/>
                             <constraint firstItem="omh-iq-Bf8" firstAttribute="top" secondItem="wog-RW-gO9" secondAttribute="top" constant="-7" id="nV3-CX-4N5"/>
+                            <constraint firstItem="NnX-Sq-fch" firstAttribute="top" secondItem="LT1-Q7-TLR" secondAttribute="top" constant="3" id="ojs-VY-6eU"/>
+                            <constraint firstItem="NnX-Sq-fch" firstAttribute="leading" secondItem="wog-RW-gO9" secondAttribute="leadingMargin" constant="-24" id="p6q-4r-f20"/>
                             <constraint firstItem="omh-iq-Bf8" firstAttribute="leading" secondItem="wog-RW-gO9" secondAttribute="leadingMargin" constant="-34" id="xbL-uM-A2y"/>
                         </constraints>
                     </view>
