@@ -111,15 +111,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="13+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="we9-gq-eg1">
-                                <rect key="frame" x="88" y="484" width="26" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NotoSansOriya" family="Noto Sans Oriya" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Season 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bv-j8-yBW">
-                                <rect key="frame" x="136" y="484" width="66" height="22"/>
+                                <rect key="frame" x="130" y="484" width="72" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="NotoSansOriya" family="Noto Sans Oriya" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -148,6 +141,9 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="nextButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oEb-Jp-RXQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -165,13 +161,15 @@
                         <outlet property="bookmarkButton" destination="PAU-yu-urU" id="ata-Kj-wTD"/>
                         <outlet property="checklistButton" destination="VQe-gj-lfP" id="6x7-Qu-8Xz"/>
                         <outlet property="movieDescriptionText" destination="fSp-cN-bfv" id="dld-Z1-X1M"/>
+                        <outlet property="movieReleaseYearText" destination="V71-h6-ufV" id="GnL-2t-STz"/>
+                        <outlet property="movieRuntimeText" destination="0bv-j8-yBW" id="ELV-7P-YE5"/>
                         <outlet property="movieTitleHome" destination="cwB-sN-vYC" id="L7U-mx-Cox"/>
                         <outlet property="watchedText" destination="NAu-rl-mGW" id="nkB-Gn-bnP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-258" y="78"/>
+            <point key="canvasLocation" x="-258.46153846153845" y="77.488151658767762"/>
         </scene>
         <!--Item-->
         <scene sceneID="Kq5-y8-vQA">
@@ -400,6 +398,7 @@
                         <outlet property="bookmarkButton" destination="Ah8-fq-fJC" id="gxI-ZA-fut"/>
                         <outlet property="checklistButton" destination="gtC-k0-cg6" id="TUx-fH-I6l"/>
                         <outlet property="movieDescriptionText" destination="auD-K0-rxp" id="x0g-xK-qxI"/>
+                        <outlet property="movieRuntimeText" destination="4d2-65-KRB" id="hWe-aj-NQ9"/>
                         <outlet property="movieTitleHome" destination="3tm-fI-h5Y" id="RKv-24-ChX"/>
                         <outlet property="watchedText" destination="2Qh-1q-h3n" id="dJS-c7-rB8"/>
                     </connections>

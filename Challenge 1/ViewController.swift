@@ -32,6 +32,8 @@ class ViewController: UIViewController {
     //Homepage Variables
     var movieTitle: String = "Twenty Five Twenty One"
     var movieDescription: String = "In a time who dreams seem out of reach, a teen fencer pursues big ambitions and meets a hardworking young man who seeks to rebuild his lifess."
+    var movieRuntime: String = "30 minutes"
+    var movieReleaseYear: String = "2022"
     
     //Outlet
     @IBOutlet weak var imageBackground: UIImageView!
@@ -41,48 +43,71 @@ class ViewController: UIViewController {
     @IBOutlet weak var addText: UILabel!
     @IBOutlet weak var watchedText: UILabel!
     @IBOutlet weak var movieDescriptionText: UILabel!
+    @IBOutlet weak var movieRuntimeText: UILabel!
+    
+    @IBOutlet weak var movieReleaseYearText: UILabel!
+    
     
     // Data Control
-    var booked: Bool = false
-    var checklist: Bool = false
+    var isBooked: Bool = false
+    var isChecklist: Bool = false
+    var indexData: Int = 0
+    var data: [Datas] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //retrieve csv
-        let data = utils.retrieve_data()
-        print(data[0])
-        
-        // Do any additional setup after loading the view.
+        data = utils.retrieve_data()
+        movieTitle = data[indexData].title ?? ""
+        movieDescription = data[indexData].description ?? ""
+        movieRuntime = utils.parseDateToString(date: data[indexData].runtime ?? "")
+        let movieReleaseDate = data[indexData].releaseDate?.split(separator: " ") ?? []
+        movieReleaseYear = String(movieReleaseDate[2])
         
         movieTitleHome.text = movieTitle
         movieDescriptionText.text = movieDescription
+        movieRuntimeText.text = movieRuntime
+        movieReleaseYearText.text = movieReleaseYear
     }
 
 
     @IBAction func bookmarkButtonClick(_ sender: Any) {
         
-        if booked {
+        if isBooked {
             bookmarkButton.setImage(UIImage(systemName: "bookmark.circle"), for: .normal)
-            booked = false
+            isBooked = false
         }else{
             bookmarkButton.setImage(UIImage(systemName: "bookmark.circle.fill"), for: .normal)
-            booked = true
+            isBooked = true
         }
     }
     
     @IBAction func checklistButtonClick(_ sender: Any) {
         
-        if checklist {
+        if isChecklist {
             checklistButton.setImage(UIImage(systemName: "checkmark.circle"), for: .normal)
-            checklist = false
+            isChecklist = false
         }else{
             checklistButton.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .normal)
-            checklist = true
+            isChecklist = true
         }
         
     }
     
+    @IBAction func nextButtonClick(_ sender: Any) {
+        indexData += 1
+        movieTitle = data[indexData].title ?? ""
+        movieDescription = data[indexData].description ?? ""
+        movieRuntime = utils.parseDateToString(date: data[indexData].runtime ?? "")
+        let movieReleaseDate = data[indexData].releaseDate?.split(separator: " ") ?? []
+        movieReleaseYear = String(movieReleaseDate[2])
+        
+        movieTitleHome.text = movieTitle
+        movieDescriptionText.text = movieDescription
+        movieRuntimeText.text = movieRuntime
+        movieReleaseYearText.text = movieReleaseYear
+    }
     
 }
 

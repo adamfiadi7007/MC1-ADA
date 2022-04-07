@@ -40,4 +40,8 @@ struct Utils{
         }
         return arrOfDatas
     }
+    
+    func parseDateToString(date: String) -> String{
+        return date.replacingOccurrences(of: " hours", with: "h").replacingOccurrences(of: " hour", with: "h").replacingOccurrences(of: " minutes", with: "m").replacingOccurrences(of: " minute", with: "m") 
+    }
 }
