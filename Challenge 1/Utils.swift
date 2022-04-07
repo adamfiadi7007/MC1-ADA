@@ -11,7 +11,7 @@ import TabularData
 struct Utils{
     func retrieve_data() -> [Datas]{
         
-        var arrOfData : [Datas] = []
+        var arrOfDatas : [Datas] = []
         
         let options = CSVReadingOptions(hasHeaderRow: true, delimiter: ",")
         guard let fileUrl = Bundle.main.url(forResource: "movie_details", withExtension: "csv") else{ return [] }
@@ -21,7 +21,6 @@ struct Utils{
         for row in dataFrame.rows{
             
             let titleId = row["title_id"] ?? ""
-//            dump(titleId)
             let releaseDate = row["release_date"] ?? ""
             let runtime = row["runtime"] ?? ""
             let title = row["title"] ?? ""
@@ -37,8 +36,8 @@ struct Utils{
 
             let data = Datas(titleId: (titleId as! String), releaseDate: releaseDate as? String , runtime: runtime as! String, title: title as! String, description: description as! String, genre: genre as! String, imageUrl: imageUrl as! String, listImages: listImages as! String, actors: actors as! String, starsActors: starsActors as! String, directors: directors as! String, streamingApp: streamingApp as! String, trailer: trailer as? String)
             
-            arrOfData.append(data)
+            arrOfDatas.append(data)
         }
-        return arrOfData
+        return arrOfDatas
     }
 }
