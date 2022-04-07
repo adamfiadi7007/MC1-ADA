@@ -15,6 +15,8 @@
 		364EFDE627FC2D3800779EB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 364EFDE427FC2D3800779EB7 /* LaunchScreen.storyboard */; };
 		364EFDF827FD493E00779EB7 /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EFDF727FD493E00779EB7 /* searchViewController.swift */; };
 		364EFDFC27FEBF2800779EB7 /* ModallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EFDFB27FEBF2800779EB7 /* ModallyViewController.swift */; };
+		364EFE0027FF3F4C00779EB7 /* watchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EFDFF27FF3F4C00779EB7 /* watchListViewController.swift */; };
+		364EFE0327FF406C00779EB7 /* homeExternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EFE0227FF406C00779EB7 /* homeExternal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		364EFDE727FC2D3800779EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		364EFDF727FD493E00779EB7 /* searchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
 		364EFDFB27FEBF2800779EB7 /* ModallyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModallyViewController.swift; sourceTree = "<group>"; };
+		364EFDFF27FF3F4C00779EB7 /* watchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchListViewController.swift; sourceTree = "<group>"; };
+		364EFE0227FF406C00779EB7 /* homeExternal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeExternal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,14 +67,40 @@
 			children = (
 				364EFDD927FC2D3700779EB7 /* AppDelegate.swift */,
 				364EFDDB27FC2D3700779EB7 /* SceneDelegate.swift */,
-				364EFDDD27FC2D3700779EB7 /* ViewController.swift */,
-				364EFDDF27FC2D3700779EB7 /* Main.storyboard */,
-				364EFDF727FD493E00779EB7 /* searchViewController.swift */,
+				364EFE0127FF3F5E00779EB7 /* watchListPage */,
+				364EFDFE27FF3F2B00779EB7 /* searchPage */,
+				364EFDFD27FEF66100779EB7 /* MainPage */,
 				364EFDE227FC2D3800779EB7 /* Assets.xcassets */,
 				364EFDE427FC2D3800779EB7 /* LaunchScreen.storyboard */,
 				364EFDE727FC2D3800779EB7 /* Info.plist */,
 			);
 			path = "Challenge 1";
+			sourceTree = "<group>";
+		};
+		364EFDFD27FEF66100779EB7 /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				364EFDDF27FC2D3700779EB7 /* Main.storyboard */,
+				364EFE0227FF406C00779EB7 /* homeExternal.swift */,
+				364EFDDD27FC2D3700779EB7 /* ViewController.swift */,
+			);
+			path = MainPage;
+			sourceTree = "<group>";
+		};
+		364EFDFE27FF3F2B00779EB7 /* searchPage */ = {
+			isa = PBXGroup;
+			children = (
+				364EFDF727FD493E00779EB7 /* searchViewController.swift */,
+			);
+			path = searchPage;
+			sourceTree = "<group>";
+		};
+		364EFE0127FF3F5E00779EB7 /* watchListPage */ = {
+			isa = PBXGroup;
+			children = (
+				364EFDFF27FF3F4C00779EB7 /* watchListViewController.swift */,
+			);
+			path = watchListPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,8 +174,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				364EFE0027FF3F4C00779EB7 /* watchListViewController.swift in Sources */,
 				364EFDDE27FC2D3700779EB7 /* ViewController.swift in Sources */,
 				364EFDDA27FC2D3700779EB7 /* AppDelegate.swift in Sources */,
+				364EFE0327FF406C00779EB7 /* homeExternal.swift in Sources */,
 				364EFDF827FD493E00779EB7 /* searchViewController.swift in Sources */,
 				364EFDDC27FC2D3700779EB7 /* SceneDelegate.swift in Sources */,
 				364EFDFC27FEBF2800779EB7 /* ModallyViewController.swift in Sources */,
@@ -295,6 +327,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7K7552J4N4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Challenge 1/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -322,6 +355,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7K7552J4N4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Challenge 1/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
