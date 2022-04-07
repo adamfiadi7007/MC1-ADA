@@ -7,7 +7,27 @@
 
 import UIKit
 
+struct Datas{
+    var titleId: String?
+    var releaseDate: String?
+    var runtime: String?
+    var title: String?
+    var description: String?
+    var genre: String?
+    var imageUrl: String?
+    var listImages: String?
+    var actors: String?
+    var starsActors: String?
+    var directors: String?
+    var streamingApp: String?
+    var trailer: String?
+}
+
+
 class ViewController: UIViewController {
+    
+    //Utils
+    let utils = Utils()
     
     //Homepage Variables
     var movieTitle: String = "Twenty Five Twenty One"
@@ -28,6 +48,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //retrieve csv
+        utils.retrieve_data()
+        
         // Do any additional setup after loading the view.
         
         movieTitleHome.text = movieTitle
