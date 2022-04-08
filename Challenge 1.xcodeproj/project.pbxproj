@@ -17,6 +17,7 @@
 		364EFDFC27FEBF2800779EB7 /* ModallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EFDFB27FEBF2800779EB7 /* ModallyViewController.swift */; };
 		364EFE0027FF3F4C00779EB7 /* watchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EFDFF27FF3F4C00779EB7 /* watchListViewController.swift */; };
 		364EFE0327FF406C00779EB7 /* homeExternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EFE0227FF406C00779EB7 /* homeExternal.swift */; };
+		E61C15A0280036920052A480 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E61C159F280036920052A480 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		364EFDFB27FEBF2800779EB7 /* ModallyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModallyViewController.swift; sourceTree = "<group>"; };
 		364EFDFF27FF3F4C00779EB7 /* watchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchListViewController.swift; sourceTree = "<group>"; };
 		364EFE0227FF406C00779EB7 /* homeExternal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeExternal.swift; sourceTree = "<group>"; };
+		E61C159F280036920052A480 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 		364EFDCD27FC2D3700779EB7 = {
 			isa = PBXGroup;
 			children = (
+				E61C159F280036920052A480 /* .gitignore */,
 				364EFDFB27FEBF2800779EB7 /* ModallyViewController.swift */,
 				364EFDD827FC2D3700779EB7 /* Challenge 1 */,
 				364EFDD727FC2D3700779EB7 /* Products */,
@@ -161,6 +164,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E61C15A0280036920052A480 /* .gitignore in Resources */,
 				364EFDE627FC2D3800779EB7 /* LaunchScreen.storyboard in Resources */,
 				364EFDE327FC2D3800779EB7 /* Assets.xcassets in Resources */,
 				364EFDE127FC2D3700779EB7 /* Main.storyboard in Resources */,
