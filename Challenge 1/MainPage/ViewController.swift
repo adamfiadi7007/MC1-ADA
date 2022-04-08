@@ -8,12 +8,25 @@
 import UIKit
 
 struct Movie {
+    var movieTitleId: String?
     var movieTitle: String?
     var movieDescription: String?
     var movieBackgroundImage: UIImage?
     var movieInfoYear: String?
     var movieInfoRating: String?
     var movieInfoSeason: String?
+    
+    var movieRuntime: String?
+    var movieGenre: String?
+    var moiveImageUrl: String?
+    var movieListImages: String?
+    var movieListActors: String?
+    var movieStarsActors: String?
+    var movieDirectors: String?
+    var movieStreamingApp: String?
+    var movieTrailer: String?
+    var movieRatings: Double?
+    var movieNumVotes: Int?
 }
 
 
@@ -21,6 +34,7 @@ class ViewController: UIViewController {
     
     /// Data
     var getMovies = movieHome()
+    var utils = Utils()
     var arrOfMovie: [Movie] = []
     
 //    //Homepage Variables
@@ -48,7 +62,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        arrOfMovie = getMovies.getMovie()
+//        arrOfMovie = getMovies.getMovie()
+        arrOfMovie = utils.retrieve_data()
         print(arrOfMovie)
         
         movieTitleHome.text = arrOfMovie[1].movieTitle
