@@ -1,13 +1,13 @@
 //
-//  watchListViewController.swift
+//  searchViewController.swift
 //  Challenge 1
 //
-//  Created by Adam Ibnu fiadi on 07/04/22.
+//  Created by Adam Ibnu fiadi on 06/04/22.
 //
 
 import UIKit
 
-class watchListViewController: UIViewController {
+class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

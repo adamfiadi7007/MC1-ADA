@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         arrOfMovie = utils.retrieveData()
         
         movieTitleHome.text = arrOfMovie[0].movieTitle
-        movieInfoYears.text = arrOfMovie[0].movieInfoYear
+        movieInfoYears.text = utils.getYear(date:arrOfMovie[0].movieInfoYear ?? "")
         movieInfoRatings.text = arrOfMovie[0].movieInfoRating
         movieInfoSeasons.text = arrOfMovie[0].movieInfoSeason
         movieDescriptionText.text = arrOfMovie[0].movieDescription

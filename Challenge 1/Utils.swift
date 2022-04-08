@@ -45,7 +45,11 @@ struct Utils{
         return arrOfDatas
     }
     
-    func parseDateToString(date: String) -> String{
+    func parseRunTimeToString(date: String) -> String{
         return date.replacingOccurrences(of: " hours", with: "h").replacingOccurrences(of: " hour", with: "h").replacingOccurrences(of: " minutes", with: "m").replacingOccurrences(of: " minute", with: "m")
+    }
+    
+    func getYear(date: String) -> String{
+        return String(date.split(separator: " ")[2])
     }
 }
