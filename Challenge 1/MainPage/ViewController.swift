@@ -25,6 +25,8 @@ struct Movie {
     var movieDirectors: String?
     var movieStreamingApp: String?
     var movieTrailer: String?
+    var movieRatings: Double?
+    var movieNumVotes: Int?
 }
 
 
@@ -32,6 +34,7 @@ class ViewController: UIViewController {
     
     /// Data
     var getMovies = movieHome()
+    var utils = Utils()
     var arrOfMovie: [Movie] = []
     
 //    //Homepage Variables
@@ -59,7 +62,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        arrOfMovie = getMovies.getMovie()
+//        arrOfMovie = getMovies.getMovie()
+        arrOfMovie = utils.retrieve_data()
         print(arrOfMovie)
         
         movieTitleHome.text = arrOfMovie[1].movieTitle
