@@ -17,6 +17,7 @@
 		364EFDFC27FEBF2800779EB7 /* ModallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EFDFB27FEBF2800779EB7 /* ModallyViewController.swift */; };
 		364EFE0027FF3F4C00779EB7 /* WatchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EFDFF27FF3F4C00779EB7 /* WatchListViewController.swift */; };
 		364EFE0327FF406C00779EB7 /* HomeExternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EFE0227FF406C00779EB7 /* HomeExternal.swift */; };
+		36A3393928008C48003BC7B4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3393828008C48003BC7B4 /* TableViewController.swift */; };
 		E61C15A0280036920052A480 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E61C159F280036920052A480 /* .gitignore */; };
 		E61C15A22800382C0052A480 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61C15A12800382C0052A480 /* Utils.swift */; };
 		E61C15A7280060570052A480 /* movie_details.csv in Resources */ = {isa = PBXBuildFile; fileRef = E61C15A6280060570052A480 /* movie_details.csv */; };
@@ -37,6 +38,7 @@
 		364EFDFB27FEBF2800779EB7 /* ModallyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModallyViewController.swift; sourceTree = "<group>"; };
 		364EFDFF27FF3F4C00779EB7 /* WatchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListViewController.swift; sourceTree = "<group>"; };
 		364EFE0227FF406C00779EB7 /* HomeExternal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExternal.swift; sourceTree = "<group>"; };
+		36A3393828008C48003BC7B4 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		E61C159F280036920052A480 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E61C15A12800382C0052A480 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		E61C15A6280060570052A480 /* movie_details.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = movie_details.csv; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 		364EFDD827FC2D3700779EB7 /* Challenge 1 */ = {
 			isa = PBXGroup;
 			children = (
+				36A3393A28008C5A003BC7B4 /* TableViewController */,
 				E61C15A8280060AB0052A480 /* Models */,
 				364EFDD927FC2D3700779EB7 /* AppDelegate.swift */,
 				364EFDDB27FC2D3700779EB7 /* SceneDelegate.swift */,
@@ -115,6 +118,14 @@
 				364EFDFF27FF3F4C00779EB7 /* WatchListViewController.swift */,
 			);
 			path = WatchListPage;
+			sourceTree = "<group>";
+		};
+		36A3393A28008C5A003BC7B4 /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				36A3393828008C48003BC7B4 /* TableViewController.swift */,
+			);
+			path = TableViewController;
 			sourceTree = "<group>";
 		};
 		E61C15A8280060AB0052A480 /* Models */ = {
@@ -205,6 +216,7 @@
 				364EFE0327FF406C00779EB7 /* HomeExternal.swift in Sources */,
 				364EFDF827FD493E00779EB7 /* SearchViewController.swift in Sources */,
 				E61C15AA280060EF0052A480 /* Movie.swift in Sources */,
+				36A3393928008C48003BC7B4 /* TableViewController.swift in Sources */,
 				364EFDDC27FC2D3700779EB7 /* SceneDelegate.swift in Sources */,
 				364EFDFC27FEBF2800779EB7 /* ModallyViewController.swift in Sources */,
 				E61C15A22800382C0052A480 /* Utils.swift in Sources */,

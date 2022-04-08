@@ -7,12 +7,13 @@
 
 import UIKit
 
-
 class ViewController: UIViewController {
     
     /// Data
     var utils = Utils()
     var arrOfMovie: [Movie] = []
+    
+
     
     //Outlet
     @IBOutlet weak var imageBackground: UIImageView!
