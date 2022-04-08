@@ -120,13 +120,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="we9-gq-eg1">
-                                <rect key="frame" x="107" y="483" width="26" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NotoSansOriya" family="Noto Sans Oriya" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Watched?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAu-rl-mGW">
                                 <rect key="frame" x="311" y="507" width="66" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -158,6 +151,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="runtime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="we9-gq-eg1">
+                                <rect key="frame" x="94" y="483" width="70" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NotoSansOriya" family="Noto Sans Oriya" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -175,9 +175,8 @@
                         <outlet property="checklistButton" destination="VQe-gj-lfP" id="6x7-Qu-8Xz"/>
                         <outlet property="imageBackground" destination="l47-8a-BkZ" id="sFM-Tu-Iny"/>
                         <outlet property="movieDescriptionText" destination="fSp-cN-bfv" id="dld-Z1-X1M"/>
-                        <outlet property="movieInfoRatings" destination="we9-gq-eg1" id="Fql-ZS-ipF"/>
-                        <outlet property="movieInfoSeasons" destination="0bv-j8-yBW" id="TC4-ng-drG"/>
                         <outlet property="movieInfoYears" destination="V71-h6-ufV" id="buK-GI-kAG"/>
+                        <outlet property="movieRuntime" destination="we9-gq-eg1" id="yck-Us-fho"/>
                         <outlet property="movieTitleHome" destination="cwB-sN-vYC" id="Kjx-Ij-4J6"/>
                         <outlet property="watchedText" destination="NAu-rl-mGW" id="nkB-Gn-bnP"/>
                     </connections>

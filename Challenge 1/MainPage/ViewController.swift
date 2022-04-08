@@ -23,8 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var watchedText: UILabel!
     @IBOutlet weak var movieDescriptionText: UILabel!
     @IBOutlet weak var movieInfoYears: UILabel!
-    @IBOutlet weak var movieInfoRatings: UILabel!
-    @IBOutlet weak var movieInfoSeasons: UILabel!
+    @IBOutlet weak var movieRuntime: UILabel!
     
     
     // Data Control
@@ -37,10 +36,9 @@ class ViewController: UIViewController {
         
         arrOfMovie = utils.retrieveData()
         
-        movieTitleHome.text = arrOfMovie[0].movieTitle
+        movieTitleHome.text = arrOfMovie[0].movieTitle ?? ""
         movieInfoYears.text = utils.getYear(date:arrOfMovie[0].movieInfoYear ?? "")
-        movieInfoRatings.text = arrOfMovie[0].movieInfoRating
-        movieInfoSeasons.text = arrOfMovie[0].movieInfoSeason
+        movieRuntime.text = utils.parseRunTimeToString(date: arrOfMovie[0].movieRuntime ?? "")
         movieDescriptionText.text = arrOfMovie[0].movieDescription
         imageBackground.loadFrom(URLAddress: arrOfMovie[0].moiveImageUrl ?? "")
         
