@@ -7,39 +7,12 @@
 
 import UIKit
 
-struct Movie {
-    var movieTitleId: String?
-    var movieTitle: String?
-    var movieDescription: String?
-    var movieBackgroundImage: UIImage?
-    var movieInfoYear: String?
-    var movieInfoRating: String?
-    var movieInfoSeason: String?
-    
-    var movieRuntime: String?
-    var movieGenre: String?
-    var moiveImageUrl: String?
-    var movieListImages: String?
-    var movieListActors: String?
-    var movieStarsActors: String?
-    var movieDirectors: String?
-    var movieStreamingApp: String?
-    var movieTrailer: String?
-    var movieRatings: Double?
-    var movieNumVotes: Int?
-}
-
 
 class ViewController: UIViewController {
     
     /// Data
-    var getMovies = movieHome()
     var utils = Utils()
     var arrOfMovie: [Movie] = []
-    
-//    //Homepage Variables
-//    var movieTitle: String = "Twenty Five Twenty One"
-//    var movieDescription: String = "In a time who dreams seem out of reach, a teen fencer pursues big ambitions and meets a hardworking young man who seeks to rebuild his lifess."
     
     //Outlet
     @IBOutlet weak var imageBackground: UIImageView!
@@ -62,22 +35,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-//        arrOfMovie = getMovies.getMovie()
-        arrOfMovie = utils.retrieve_data()
-        print(arrOfMovie)
+        arrOfMovie = utils.retrieveData()
         
-        movieTitleHome.text = arrOfMovie[1].movieTitle
-        movieInfoYears.text = arrOfMovie[1].movieInfoYear
-        movieInfoRatings.text = arrOfMovie[1].movieInfoRating
-        movieInfoSeasons.text = arrOfMovie[1].movieInfoSeason
-        movieDescriptionText.text = arrOfMovie[1].movieDescription
-        imageBackground.image = arrOfMovie[1].movieBackgroundImage
+        movieTitleHome.text = arrOfMovie[0].movieTitle
+        movieInfoYears.text = utils.getYear(date:arrOfMovie[0].movieInfoYear ?? "")
+        movieInfoRatings.text = arrOfMovie[0].movieInfoRating
+        movieInfoSeasons.text = arrOfMovie[0].movieInfoSeason
+        movieDescriptionText.text = arrOfMovie[0].movieDescription
+        imageBackground.loadFrom(URLAddress: arrOfMovie[0].moiveImageUrl ?? "")
         
-//        movieTitleHome.text = movieTitle
-//        movieDescriptionText.text = movieDescription
     }
-
-
+    
+    
     @IBAction func bookmarkButtonClick(_ sender: Any) {
         
         if booked {
@@ -98,9 +67,23 @@ class ViewController: UIViewController {
             checklistButton.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .normal)
             checklist = true
         }
-        
     }
     
     
 }
 
+extension UIImageView {
+    func loadFrom(URLAddress: String) {
+        guard let url = URL(string: URLAddress) else {
+            return
+        }
+        
+        DispatchQueue.main.async { [weak self] in
+            if let imageData = try? Data(contentsOf: url) {
+                if let loadedImage = UIImage(data: imageData) {
+                    self?.image = loadedImage
+                }
+            }
+        }
+    }
+}
