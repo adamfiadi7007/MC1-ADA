@@ -10,6 +10,7 @@ import UIKit
 struct Movie {
     var movieTitle: String?
     var movieDescription: String?
+    var movieBackgroundImage: UIImage?
     var movieInfoYear: String?
     var movieInfoRating: String?
     var movieInfoSeason: String?
@@ -50,11 +51,12 @@ class ViewController: UIViewController {
         arrOfMovie = getMovies.getMovie()
         print(arrOfMovie)
         
-        movieTitleHome.text = arrOfMovie[0].movieTitle
-        movieInfoYears.text = arrOfMovie[0].movieInfoYear
-        movieInfoRatings.text = arrOfMovie[0].movieInfoRating
-        movieInfoSeasons.text = arrOfMovie[0].movieInfoSeason
-        movieDescriptionText.text = arrOfMovie[0].movieDescription
+        movieTitleHome.text = arrOfMovie[1].movieTitle
+        movieInfoYears.text = arrOfMovie[1].movieInfoYear
+        movieInfoRatings.text = arrOfMovie[1].movieInfoRating
+        movieInfoSeasons.text = arrOfMovie[1].movieInfoSeason
+        movieDescriptionText.text = arrOfMovie[1].movieDescription
+        imageBackground.image = arrOfMovie[1].movieBackgroundImage
         
 //        movieTitleHome.text = movieTitle
 //        movieDescriptionText.text = movieDescription
