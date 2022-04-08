@@ -18,6 +18,7 @@
 		364EFE0027FF3F4C00779EB7 /* watchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EFDFF27FF3F4C00779EB7 /* watchListViewController.swift */; };
 		364EFE0327FF406C00779EB7 /* homeExternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EFE0227FF406C00779EB7 /* homeExternal.swift */; };
 		E61C15A0280036920052A480 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E61C159F280036920052A480 /* .gitignore */; };
+		E61C15A22800382C0052A480 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61C15A12800382C0052A480 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		364EFDFF27FF3F4C00779EB7 /* watchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchListViewController.swift; sourceTree = "<group>"; };
 		364EFE0227FF406C00779EB7 /* homeExternal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeExternal.swift; sourceTree = "<group>"; };
 		E61C159F280036920052A480 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		E61C15A12800382C0052A480 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				364EFDE227FC2D3800779EB7 /* Assets.xcassets */,
 				364EFDE427FC2D3800779EB7 /* LaunchScreen.storyboard */,
 				364EFDE727FC2D3800779EB7 /* Info.plist */,
+				E61C15A12800382C0052A480 /* Utils.swift */,
 			);
 			path = "Challenge 1";
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				364EFDF827FD493E00779EB7 /* searchViewController.swift in Sources */,
 				364EFDDC27FC2D3700779EB7 /* SceneDelegate.swift in Sources */,
 				364EFDFC27FEBF2800779EB7 /* ModallyViewController.swift in Sources */,
+				E61C15A22800382C0052A480 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,7 +335,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7K7552J4N4;
+				DEVELOPMENT_TEAM = 7RSZRTV9Q5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Challenge 1/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -359,7 +363,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7K7552J4N4;
+				DEVELOPMENT_TEAM = 7RSZRTV9Q5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Challenge 1/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
