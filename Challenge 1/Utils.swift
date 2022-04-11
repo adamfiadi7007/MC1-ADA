@@ -52,4 +52,58 @@ struct Utils{
     func getYear(date: String) -> String{
         return String(date.split(separator: " ")[2])
     }
+    
+    
+    func readJSONFile(forName name: String) -> Data? {
+        do{
+            if let bundlePath = Bundle.main.path(forResource: name, ofType: "json"), let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
+                return jsonData
+            }
+        }catch{
+            print(error)
+        }
+        return nil
+    }
+    
+    struct similarityData{
+        var offset:Int?
+        var element:Double?
+    }
+    
+    func parseData(jsonData:Data) -> [[Double]]{
+        let listSimilarity: [[Double]] = try! JSONDecoder().decode([[Double]].self, from:jsonData)
+
+
+        return listSimilarity
+    }
+
+    func getRecommendations(indexes:[Int]) -> [Movie]{
+        var listSimilarity:[[Double]] = []
+        var recommendations:[Movie] = []
+        var temp:[Movie] = []
+        if let localData = self.readJSONFile(forName: "cosine_similarity") {
+            listSimilarity = self.parseData(jsonData: localData)
+        }
+        if listSimilarity.count>0{
+            let arrofMovies = self.retrieveData()
+            
+            for index in indexes{
+                let mov1=listSimilarity[index].enumerated().sorted {
+                    $0.element > $1.element
+                }
+
+                for (idx,_) in mov1[1...11]{
+                    temp.append(arrofMovies[idx])
+                }
+            }
+        }
+        for data in temp {
+            if (recommendations.filter{$0.movieTitleId == data.movieTitleId}.count==0)
+            {
+                recommendations.append(data)
+            }
+        }
+//        print(recommendations)
+        return recommendations
+    }
 }

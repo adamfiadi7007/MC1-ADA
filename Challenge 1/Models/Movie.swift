@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct Movie {
+struct Movie{
     var movieTitleId: String?
     var movieTitle: String?
     var movieDescription: String?
@@ -27,4 +27,9 @@ struct Movie {
     var movieTrailer: String?
     var movieRatings: Double?
     var movieNumVotes: Int?
+    
+
+    static func == (lhs: Movie, rhs: Movie) -> Bool {
+        return lhs.movieTitleId == rhs.movieTitleId
+    }
 }
