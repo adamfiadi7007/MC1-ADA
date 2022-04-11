@@ -70,6 +70,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="pbs-BX-kc3"/>
+                    <connections>
+                        <outlet property="HomeTableCell" destination="CHA-6f-fm6" id="VrA-5k-gqp"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="24f-v0-guG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -209,7 +212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="765" y="77"/>
+            <point key="canvasLocation" x="971" y="-661"/>
         </scene>
         <!--Item-->
         <scene sceneID="Kq5-y8-vQA">
