@@ -11,6 +11,10 @@ class TableViewController: UITableViewController {
 
     var titles: [String] = ["satu", "dua", "tiga"]
     
+    // Cell ID Initiation
+    let homeCellId = "HomeTableViewCell"
+    let movieDescs = [movieDesc]()
+    
     @IBOutlet var HomeTableCell: UITableView!
     
     override func viewDidLoad() {
@@ -21,6 +25,18 @@ class TableViewController: UITableViewController {
         tableView.rowHeight = view.frame.height
         
     
+        //Registering Table View
+        tableView.register(UINib.init(nibName: homeCellId, bundle: nil), forCellReuseIdentifier: homeCellId)
+        tableView.separatorColor = UIColor.black
+        
+        //Init Data
+        for _ in 1...3 {
+            let movieDescss = movieDesc()
+            movieDescss?.title = "TEST"
+        }
+        tableView.reloadData()
+        
+        
     }
 
     
@@ -33,14 +49,17 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return titles.count
+        return movieDescs.count
         
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: homeCellId, for: indexPath) as! HomeTableViewCell
         
-        cell.textLabel?.text = "Cell \(titles[indexPath.row])"
+        let movieDescss = movieDescs[indexPath.row]
+        cell.movieTitle.text = movieDescss.title
+        
+//        cell.textLabel?.text = "Cell \(titles[indexPath.row])"
         
         return cell
     }

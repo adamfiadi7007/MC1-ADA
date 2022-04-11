@@ -11,6 +11,7 @@ class HomeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var movieTitle: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
