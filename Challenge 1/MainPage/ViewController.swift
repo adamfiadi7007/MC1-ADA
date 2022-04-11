@@ -43,6 +43,8 @@ class ViewController: UIViewController {
         movieDescriptionText.text = arrOfMovie[0].movieDescription
         imageBackground.loadFrom(URLAddress: arrOfMovie[0].moiveImageUrl ?? "")
         
+        let datas = utils.getRecommendations(indexes: [0,1,3])
+//        print("jumlah data = \(datas.count)")
     }
     
     
