@@ -23,16 +23,17 @@ class TableViewController: UITableViewController {
         // Hide Navigation & fixing the height of row
         navigationController?.isNavigationBarHidden = true
         tableView.rowHeight = view.frame.height
+//        tableView.estimatedRowHeight = view.frame.height
         
     
         // Registering Table View
         tableView.register(UINib.init(nibName: homeCellId, bundle: nil), forCellReuseIdentifier: homeCellId)
-        tableView.separatorColor = UIColor.black
+//        tableView.separatorColor = UIColor.clear
         
         // Init Data
         for _ in 1...5 {
             var movieDescription = movieDesc()
-            movieDescription.title = "Test Title"
+            movieDescription.title = "Movie"
             appearMovieDesc.append(movieDescription)
         }
         tableView.reloadData()
@@ -47,7 +48,7 @@ class TableViewController: UITableViewController {
         
         let movieDescriptions = appearMovieDesc[indexPath.row]
         cell.movieTitle.text = movieDescriptions.title
-                
+        
         return cell
     }
 
