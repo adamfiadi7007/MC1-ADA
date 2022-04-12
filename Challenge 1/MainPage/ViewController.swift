@@ -38,8 +38,13 @@ class ViewController: UIViewController {
         //        arrOfMovie = utils.retrieveData()
         
         
-        storage.saveMovies()
+        
         arrOfMovie = storage.getMovies()
+        
+        if arrOfMovie.count == 0 {
+            storage.saveMovies()
+            arrOfMovie = storage.getMovies()
+        }
         
         storage.setStorage(indexes: [0,1,2], key:"userProfilingData")
         let datas = utils.getRecommendations(indexes:storage.getStorage(key:"userProfilingData"))
