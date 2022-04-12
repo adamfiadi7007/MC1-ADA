@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1DDE12AE280430FE00438774 /* HomeExternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE12AD280430FE00438774 /* HomeExternal.swift */; };
 		3601837C280481B40057B92A /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3601837A280481B40057B92A /* HomeTableViewCell.swift */; };
 		3601837D280481B40057B92A /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3601837B280481B40057B92A /* HomeTableViewCell.xib */; };
 		3601837F280483690057B92A /* movieDesc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3601837E280483690057B92A /* movieDesc.swift */; };
@@ -30,7 +29,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1DDE12AD280430FE00438774 /* HomeExternal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExternal.swift; sourceTree = "<group>"; };
 		3601837A280481B40057B92A /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		3601837B280481B40057B92A /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		3601837E280483690057B92A /* movieDesc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movieDesc.swift; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 			children = (
 				364EFDDF27FC2D3700779EB7 /* Main.storyboard */,
 				364EFDDD27FC2D3700779EB7 /* ViewController.swift */,
-				1DDE12AD280430FE00438774 /* HomeExternal.swift */,
 			);
 			path = MainPage;
 			sourceTree = "<group>";
@@ -240,7 +237,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DDE12AE280430FE00438774 /* HomeExternal.swift in Sources */,
 				364EFE0027FF3F4C00779EB7 /* WatchListViewController.swift in Sources */,
 				364EFDDE27FC2D3700779EB7 /* ViewController.swift in Sources */,
 				3601837F280483690057B92A /* movieDesc.swift in Sources */,
