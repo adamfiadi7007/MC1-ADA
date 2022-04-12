@@ -35,7 +35,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        arrOfMovie = utils.retrieveData()
+//        arrOfMovie = utils.retrieveData()
+        
+        
+        storage.saveMovies()
+        arrOfMovie = storage.getMovies()
         
         movieTitleHome.text = arrOfMovie[0].movieTitle ?? ""
         movieInfoYears.text = utils.getYear(date:arrOfMovie[0].movieInfoYear ?? "")
@@ -53,7 +57,7 @@ class ViewController: UIViewController {
             print(profile)
         }
         print(status)
-        
+
 //        print("jumlah data = \(datas.count)")
     }
     

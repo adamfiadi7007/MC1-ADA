@@ -8,11 +8,10 @@
 import Foundation
 import UIKit
 
-struct Movie{
+struct Movie:Codable{
     var movieTitleId: String?
     var movieTitle: String?
     var movieDescription: String?
-    var movieBackgroundImage: UIImage?
     var movieInfoYear: String?
     var movieInfoRating: String?
     var movieInfoSeason: String?
