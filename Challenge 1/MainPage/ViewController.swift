@@ -12,8 +12,8 @@ class ViewController: UIViewController {
     /// Data
     var utils = Utils()
     var arrOfMovie: [Movie] = []
+    var storage = LocalStorage()
     
-
     
     //Outlet
     @IBOutlet weak var imageBackground: UIImageView!
@@ -35,7 +35,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        arrOfMovie = utils.retrieveData()
+        //        arrOfMovie = utils.retrieveData()
+        
+        
+        storage.saveMovies()
+        arrOfMovie = storage.getMovies()
         
         movieTitleHome.text = arrOfMovie[0].movieTitle ?? ""
         movieInfoYears.text = utils.getYear(date:arrOfMovie[0].movieInfoYear ?? "")
@@ -43,8 +47,20 @@ class ViewController: UIViewController {
         movieDescriptionText.text = arrOfMovie[0].movieDescription
         imageBackground.loadFrom(URLAddress: arrOfMovie[0].moiveImageUrl ?? "")
         
-        let datas = utils.getRecommendations(indexes: [0,1,3])
-//        print("jumlah data = \(datas.count)")
+        storage.setProfiling(indexes: [0,1,2])
+        let datas = utils.getRecommendations(indexes:storage.getProfiling())
+        storage.updateProfiling(indexes: [0,1,3])
+        //        print(datas)
+        //        let status = storage.set(data: "halo", key: "profiling")
+        
+        
+        //        if status == true{
+        //            let profile = storage.get(key: "profiling")
+        //            print(profile)
+        //        }
+        //        print(status)
+        
+        //        print("jumlah data = \(datas.count)")
     }
     
     
@@ -88,3 +104,4 @@ extension UIImageView {
         }
     }
 }
+
