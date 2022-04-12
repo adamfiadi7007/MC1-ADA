@@ -46,7 +46,6 @@ class ViewController: UIViewController {
             arrOfMovie = storage.getMovies()
         }
         
-        storage.setStorage(indexes: [0,1,2], key:"userProfilingData")
         let datas = utils.getRecommendations(indexes:storage.getStorage(key:"userProfilingData"))
 //        storage.updateStorage(indexes: [0,1,3], key:"userProfilingData")
         
