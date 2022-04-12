@@ -103,7 +103,6 @@ struct Utils{
                 recommendations.append(data)
             }
         }
-//        print(recommendations)
         return recommendations
     }
 }
