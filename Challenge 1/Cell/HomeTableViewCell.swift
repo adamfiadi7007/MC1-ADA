@@ -15,7 +15,7 @@ class HomeTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        
+        contentView.heightAnchor
         
     }
 

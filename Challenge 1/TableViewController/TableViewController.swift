@@ -23,6 +23,7 @@ class TableViewController: UITableViewController {
         // Hide Navigation & fixing the height of row
         navigationController?.isNavigationBarHidden = true
         tableView.rowHeight = view.frame.height
+        
 //        tableView.estimatedRowHeight = view.frame.height
         
     
