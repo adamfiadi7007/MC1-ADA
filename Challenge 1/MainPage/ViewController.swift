@@ -47,16 +47,18 @@ class ViewController: UIViewController {
         movieDescriptionText.text = arrOfMovie[0].movieDescription
         imageBackground.loadFrom(URLAddress: arrOfMovie[0].moiveImageUrl ?? "")
         
-        let datas = utils.getRecommendations(indexes: [0,1,3])
+        storage.setProfiling(indexes: [0,1,2])
+        let datas = utils.getRecommendations(indexes:storage.getProfiling())
+        storage.updateProfiling(indexes: [0,1,3])
+//        print(datas)
+//        let status = storage.set(data: "halo", key: "profiling")
         
-        let status = storage.set(data: "halo", key: "profiling")
         
-        
-        if status == true{
-            let profile = storage.get(key: "profiling")
-            print(profile)
-        }
-        print(status)
+//        if status == true{
+//            let profile = storage.get(key: "profiling")
+//            print(profile)
+//        }
+//        print(status)
 
 //        print("jumlah data = \(datas.count)")
     }
@@ -102,3 +104,4 @@ extension UIImageView {
         }
     }
 }
+

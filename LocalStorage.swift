@@ -45,10 +45,56 @@ struct LocalStorage{
         if let savedMovies = userDefault.object(forKey: "listMovies") as? Data {
             let decoder = JSONDecoder()
             if let savedListMovies = try? decoder.decode([Movie].self, from: savedMovies) {
-                print(savedListMovies[1])
+//                print(savedListMovies[1])
                 return savedListMovies
             }
         }
         return []
+    }
+    //simpen index movie yang disukai user
+    func setProfiling(indexes:[Int]) -> Bool{
+        let encoder = JSONEncoder()
+        if let indexList = try? encoder.encode(indexes) {
+            self.set(data:indexList, key:"userProfilingData")
+        }
+        return true
+    }
+    
+    func getProfiling() -> [Int]{
+        if let indexList = userDefault.object(forKey: "userProfilingData") as? Data {
+            let decoder = JSONDecoder()
+            if let indexListProfiling = try? decoder.decode([Int].self, from: indexList) {
+//                print(savedListMovies[1])
+                return indexListProfiling
+            }
+        }
+        return []
+    }
+    
+    func updateProfiling(indexes:[Int]) -> Bool{
+        var profilingIndexes:[Int] = self.getProfiling()
+        
+        profilingIndexes+=indexes
+        
+        print(profilingIndexes.removingDuplicates())
+        
+        self.setProfiling(indexes: profilingIndexes.removingDuplicates())
+        
+        return true
+    }
+    
+}
+
+extension Array where Element: Hashable {
+    func removingDuplicates() -> [Element] {
+        var addedDict = [Element: Bool]()
+
+        return filter {
+            addedDict.updateValue(true, forKey: $0) == nil
+        }
+    }
+
+    mutating func removeDuplicates() {
+        self = self.removingDuplicates()
     }
 }
