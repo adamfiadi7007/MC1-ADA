@@ -51,16 +51,18 @@ struct LocalStorage{
     }
     
     //simpen index movie yang disukai user
-    func setProfiling(indexes:[Int]) -> Bool{
+    func setStorage(indexes:[Int], key:String) -> Bool{
         let encoder = JSONEncoder()
         if let indexList = try? encoder.encode(indexes) {
-            self.set(data:indexList, key:"userProfilingData")
+//            self.set(data:indexList, key:"userProfilingData")
+            self.set(data:indexList, key:key)
         }
         return true
     }
     
-    func getProfiling() -> [Int]{
-        if let indexList = userDefault.object(forKey: "userProfilingData") as? Data {
+    func getStorage(key:String) -> [Int]{
+//        if let indexList = userDefault.object(forKey: "userProfilingData") as? Data {
+        if let indexList = userDefault.object(forKey: key) as? Data {
             let decoder = JSONDecoder()
             if let indexListProfiling = try? decoder.decode([Int].self, from: indexList) {
                 return indexListProfiling
@@ -69,13 +71,12 @@ struct LocalStorage{
         return []
     }
     
-    func updateProfiling(indexes:[Int]) -> Bool{
-        var profilingIndexes:[Int] = self.getProfiling()
+    func updateStorage(indexes:[Int],key:String) -> Bool{
+        var profilingIndexes:[Int] = self.getStorage(key:key)
         
         profilingIndexes+=indexes
         
-        self.setProfiling(indexes: profilingIndexes.removingDuplicates())
-        
+        self.setStorage(indexes: profilingIndexes.removingDuplicates(),key:key)
         return true
     }
     
