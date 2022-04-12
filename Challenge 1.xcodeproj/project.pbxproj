@@ -18,6 +18,7 @@
 		364EFDFC27FEBF2800779EB7 /* ModallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EFDFB27FEBF2800779EB7 /* ModallyViewController.swift */; };
 		364EFE0027FF3F4C00779EB7 /* WatchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EFDFF27FF3F4C00779EB7 /* WatchListViewController.swift */; };
 		36A3393928008C48003BC7B4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3393828008C48003BC7B4 /* TableViewController.swift */; };
+		4ED7D5E128055B3300ADEADE /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED7D5E028055B3300ADEADE /* LocalStorage.swift */; };
 		E61C15A0280036920052A480 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E61C159F280036920052A480 /* .gitignore */; };
 		E61C15A22800382C0052A480 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61C15A12800382C0052A480 /* Utils.swift */; };
 		E61C15A7280060570052A480 /* movie_details.csv in Resources */ = {isa = PBXBuildFile; fileRef = E61C15A6280060570052A480 /* movie_details.csv */; };
@@ -40,6 +41,7 @@
 		364EFDFB27FEBF2800779EB7 /* ModallyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModallyViewController.swift; sourceTree = "<group>"; };
 		364EFDFF27FF3F4C00779EB7 /* WatchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListViewController.swift; sourceTree = "<group>"; };
 		36A3393828008C48003BC7B4 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		4ED7D5E028055B3300ADEADE /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		E61C159F280036920052A480 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E61C15A12800382C0052A480 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		E61C15A6280060570052A480 /* movie_details.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = movie_details.csv; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 		364EFDCD27FC2D3700779EB7 = {
 			isa = PBXGroup;
 			children = (
+				4ED7D5E028055B3300ADEADE /* LocalStorage.swift */,
 				E61C159F280036920052A480 /* .gitignore */,
 				364EFDFB27FEBF2800779EB7 /* ModallyViewController.swift */,
 				364EFDD827FC2D3700779EB7 /* Challenge 1 */,
@@ -231,6 +234,7 @@
 				36A3393928008C48003BC7B4 /* TableViewController.swift in Sources */,
 				364EFDDC27FC2D3700779EB7 /* SceneDelegate.swift in Sources */,
 				364EFDFC27FEBF2800779EB7 /* ModallyViewController.swift in Sources */,
+				4ED7D5E128055B3300ADEADE /* LocalStorage.swift in Sources */,
 				E61C15A22800382C0052A480 /* Utils.swift in Sources */,
 				E61C15AC280061340052A480 /* Actor.swift in Sources */,
 			);

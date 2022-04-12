@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     /// Data
     var utils = Utils()
     var arrOfMovie: [Movie] = []
-    
+    var storage = LocalStorage()
 
     
     //Outlet
