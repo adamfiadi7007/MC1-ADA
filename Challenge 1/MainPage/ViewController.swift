@@ -41,26 +41,16 @@ class ViewController: UIViewController {
         storage.saveMovies()
         arrOfMovie = storage.getMovies()
         
-        movieTitleHome.text = arrOfMovie[0].movieTitle ?? ""
-        movieInfoYears.text = utils.getYear(date:arrOfMovie[0].movieInfoYear ?? "")
-        movieRuntime.text = utils.parseRunTimeToString(date: arrOfMovie[0].movieRuntime ?? "")
-        movieDescriptionText.text = arrOfMovie[0].movieDescription
-        imageBackground.loadFrom(URLAddress: arrOfMovie[0].moiveImageUrl ?? "")
+        storage.setStorage(indexes: [0,1,2], key:"userProfilingData")
+        let datas = utils.getRecommendations(indexes:storage.getStorage(key:"userProfilingData"))
+//        storage.updateStorage(indexes: [0,1,3], key:"userProfilingData")
         
-        storage.setProfiling(indexes: [0,1,2])
-        let datas = utils.getRecommendations(indexes:storage.getProfiling())
-        storage.updateProfiling(indexes: [0,1,3])
-        //        print(datas)
-        //        let status = storage.set(data: "halo", key: "profiling")
+        movieTitleHome.text = datas[0].movieTitle ?? ""
+        movieInfoYears.text = utils.getYear(date:datas[0].movieInfoYear ?? "")
+        movieRuntime.text = utils.parseRunTimeToString(date: datas[0].movieRuntime ?? "")
+        movieDescriptionText.text = datas[0].movieDescription
+        imageBackground.loadFrom(URLAddress: datas[0].moiveImageUrl ?? "")
         
-        
-        //        if status == true{
-        //            let profile = storage.get(key: "profiling")
-        //            print(profile)
-        //        }
-        //        print(status)
-        
-        //        print("jumlah data = \(datas.count)")
     }
     
     
