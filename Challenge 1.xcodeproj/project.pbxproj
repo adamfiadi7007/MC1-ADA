@@ -230,7 +230,6 @@
 				E61C15A7280060570052A480 /* movie_details.csv in Resources */,
 				364EFDE127FC2D3700779EB7 /* Main.storyboard in Resources */,
 				E6C998C52804120B0038F2F9 /* cosine_similarity.json in Resources */,
-				1DDE12B328043A2000438774 /* OnboardingView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,16 +240,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DDE12B828043F0200438774 /* OnboardingViewController.swift in Sources */,
-				1DDE12B628043B7A00438774 /* CornerRadius.swift in Sources */,
-				1DDE12BC28054AB500438774 /* OnboardingCollectionViewCell.swift in Sources */,
 				364EFE0027FF3F4C00779EB7 /* WatchListViewController.swift in Sources */,
 				364EFDDE27FC2D3700779EB7 /* ViewController.swift in Sources */,
 				3601837F280483690057B92A /* movieDesc.swift in Sources */,
 				364EFDDA27FC2D3700779EB7 /* AppDelegate.swift in Sources */,
 				364EFDF827FD493E00779EB7 /* SearchViewController.swift in Sources */,
-				1DDE12BA2804696E00438774 /* GradientButton.swift in Sources */,
-				1DDE12C6280562AD00438774 /* OnboardingStruct.swift in Sources */,
 				E61C15AA280060EF0052A480 /* Movie.swift in Sources */,
 				3601837C280481B40057B92A /* HomeTableViewCell.swift in Sources */,
 				36A3393928008C48003BC7B4 /* TableViewController.swift in Sources */,
@@ -405,13 +399,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7RSZRTV9Q5;
+				DEVELOPMENT_TEAM = 7K7552J4N4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Challenge 1/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Comvie;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = OnboardingView;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -434,13 +428,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7RSZRTV9Q5;
+				DEVELOPMENT_TEAM = 7K7552J4N4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Challenge 1/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Comvie;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = OnboardingView;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
