@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-class movieDesc{
+struct movieDesc{
     var bgImg: UIImage?
     var title: String?
-    required init?() {}
+//    required init?() {}
 }
