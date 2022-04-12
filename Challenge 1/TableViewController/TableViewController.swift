@@ -30,13 +30,12 @@ class TableViewController: UITableViewController {
         tableView.separatorColor = UIColor.black
         
         // Init Data
-        for _ in 1...3 {
+        for _ in 1...5 {
             var movieDescription = movieDesc()
             movieDescription.title = "Test Title"
             appearMovieDesc.append(movieDescription)
         }
         tableView.reloadData()
-        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,11 +45,9 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: homeCellId, for: indexPath) as! HomeTableViewCell
         
-        let movieDescss = appearMovieDesc[indexPath.row]
-        cell.movieTitle.text = movieDescss.title
-        
-//        cell.textLabel?.text = "Cell \(titles[indexPath.row])"
-        
+        let movieDescriptions = appearMovieDesc[indexPath.row]
+        cell.movieTitle.text = movieDescriptions.title
+                
         return cell
     }
 
