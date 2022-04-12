@@ -12,8 +12,8 @@ class ViewController: UIViewController {
     /// Data
     var utils = Utils()
     var arrOfMovie: [Movie] = []
+    var storage = LocalStorage()
     
-
     
     //Outlet
     @IBOutlet weak var imageBackground: UIImageView!
@@ -35,16 +35,27 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        arrOfMovie = utils.retrieveData()
+        //        arrOfMovie = utils.retrieveData()
         
-        movieTitleHome.text = arrOfMovie[0].movieTitle ?? ""
-        movieInfoYears.text = utils.getYear(date:arrOfMovie[0].movieInfoYear ?? "")
-        movieRuntime.text = utils.parseRunTimeToString(date: arrOfMovie[0].movieRuntime ?? "")
-        movieDescriptionText.text = arrOfMovie[0].movieDescription
-        imageBackground.loadFrom(URLAddress: arrOfMovie[0].moiveImageUrl ?? "")
         
-        let datas = utils.getRecommendations(indexes: [0,1,3])
-//        print("jumlah data = \(datas.count)")
+        
+        arrOfMovie = storage.getMovies()
+        
+        if arrOfMovie.count == 0 {
+            storage.saveMovies()
+            arrOfMovie = storage.getMovies()
+        }
+        
+        storage.setStorage(indexes: [0,1,2], key:"userProfilingData")
+        let datas = utils.getRecommendations(indexes:storage.getStorage(key:"userProfilingData"))
+//        storage.updateStorage(indexes: [0,1,3], key:"userProfilingData")
+        
+        movieTitleHome.text = datas[0].movieTitle ?? ""
+        movieInfoYears.text = utils.getYear(date:datas[0].movieInfoYear ?? "")
+        movieRuntime.text = utils.parseRunTimeToString(date: datas[0].movieRuntime ?? "")
+        movieDescriptionText.text = datas[0].movieDescription
+        imageBackground.loadFrom(URLAddress: datas[0].moiveImageUrl ?? "")
+        
     }
     
     
@@ -88,3 +99,4 @@ extension UIImageView {
         }
     }
 }
+

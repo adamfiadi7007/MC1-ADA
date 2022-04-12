@@ -72,11 +72,11 @@ struct Utils{
     
     func parseData(jsonData:Data) -> [[Double]]{
         let listSimilarity: [[Double]] = try! JSONDecoder().decode([[Double]].self, from:jsonData)
-
-
+        
+        
         return listSimilarity
     }
-
+    
     func getRecommendations(indexes:[Int]) -> [Movie]{
         var listSimilarity:[[Double]] = []
         var recommendations:[Movie] = []
@@ -91,7 +91,7 @@ struct Utils{
                 let mov1=listSimilarity[index].enumerated().sorted {
                     $0.element > $1.element
                 }
-
+                
                 for (idx,_) in mov1[1...11]{
                     temp.append(arrofMovies[idx])
                 }
@@ -103,7 +103,6 @@ struct Utils{
                 recommendations.append(data)
             }
         }
-//        print(recommendations)
         return recommendations
     }
 }
