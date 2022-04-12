@@ -13,7 +13,7 @@ class TableViewController: UITableViewController {
     
     // Cell ID Initiation
     let homeCellId = "HomeTableViewCell"
-    var appearMovieDesc = [movieDesc]()
+    var appearMovieDesc = [MovieDescription]()
     
     @IBOutlet var HomeTableCell: UITableView!
     
@@ -33,7 +33,7 @@ class TableViewController: UITableViewController {
         
         // Init Data
         for _ in 1...5 {
-            var movieDescription = movieDesc()
+            var movieDescription = MovieDescription()
             movieDescription.title = "Movie"
             appearMovieDesc.append(movieDescription)
         }

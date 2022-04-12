@@ -1,14 +1,14 @@
 //
-//  movieDesc.swift
+//  MovieDescription.swift
 //  Challenge 1
 //
-//  Created by Adam Ibnu fiadi on 11/04/22.
+//  Created by zy on 12/04/22.
 //
 
 import Foundation
 import UIKit
 
-struct movieDesc{
+struct MovieDescription{
     var bgImg: UIImage?
     var title: String?
 //    required init?() {}
