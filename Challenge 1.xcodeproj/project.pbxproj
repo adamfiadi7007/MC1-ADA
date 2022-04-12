@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1DDE12AE280430FE00438774 /* HomeExternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE12AD280430FE00438774 /* HomeExternal.swift */; };
 		364EFDDA27FC2D3700779EB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EFDD927FC2D3700779EB7 /* AppDelegate.swift */; };
 		364EFDDC27FC2D3700779EB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EFDDB27FC2D3700779EB7 /* SceneDelegate.swift */; };
 		364EFDDE27FC2D3700779EB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EFDDD27FC2D3700779EB7 /* ViewController.swift */; };
@@ -28,7 +27,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1DDE12AD280430FE00438774 /* HomeExternal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExternal.swift; sourceTree = "<group>"; };
 		364EFDD627FC2D3700779EB7 /* Challenge 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Challenge 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		364EFDD927FC2D3700779EB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		364EFDDB27FC2D3700779EB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +62,6 @@
 		364EFDCD27FC2D3700779EB7 = {
 			isa = PBXGroup;
 			children = (
-				4ED7D5E028055B3300ADEADE /* LocalStorage.swift */,
 				E61C159F280036920052A480 /* .gitignore */,
 				364EFDFB27FEBF2800779EB7 /* ModallyViewController.swift */,
 				364EFDD827FC2D3700779EB7 /* Challenge 1 */,
@@ -95,6 +92,7 @@
 				364EFDE427FC2D3800779EB7 /* LaunchScreen.storyboard */,
 				364EFDE727FC2D3800779EB7 /* Info.plist */,
 				E61C15A12800382C0052A480 /* Utils.swift */,
+				4ED7D5E028055B3300ADEADE /* LocalStorage.swift */,
 			);
 			path = "Challenge 1";
 			sourceTree = "<group>";
@@ -104,7 +102,6 @@
 			children = (
 				364EFDDF27FC2D3700779EB7 /* Main.storyboard */,
 				364EFDDD27FC2D3700779EB7 /* ViewController.swift */,
-				1DDE12AD280430FE00438774 /* HomeExternal.swift */,
 			);
 			path = MainPage;
 			sourceTree = "<group>";
@@ -225,7 +222,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DDE12AE280430FE00438774 /* HomeExternal.swift in Sources */,
 				364EFE0027FF3F4C00779EB7 /* WatchListViewController.swift in Sources */,
 				364EFDDE27FC2D3700779EB7 /* ViewController.swift in Sources */,
 				364EFDDA27FC2D3700779EB7 /* AppDelegate.swift in Sources */,

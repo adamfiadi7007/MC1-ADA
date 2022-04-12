@@ -15,7 +15,6 @@ struct LocalStorage{
     func set(data:Any, key:String) -> Bool{
         do{
             userDefault.set(data, forKey: key)
-//            print(data)
         }catch{
             return false
         }
@@ -45,12 +44,12 @@ struct LocalStorage{
         if let savedMovies = userDefault.object(forKey: "listMovies") as? Data {
             let decoder = JSONDecoder()
             if let savedListMovies = try? decoder.decode([Movie].self, from: savedMovies) {
-//                print(savedListMovies[1])
                 return savedListMovies
             }
         }
         return []
     }
+    
     //simpen index movie yang disukai user
     func setProfiling(indexes:[Int]) -> Bool{
         let encoder = JSONEncoder()
@@ -64,7 +63,6 @@ struct LocalStorage{
         if let indexList = userDefault.object(forKey: "userProfilingData") as? Data {
             let decoder = JSONDecoder()
             if let indexListProfiling = try? decoder.decode([Int].self, from: indexList) {
-//                print(savedListMovies[1])
                 return indexListProfiling
             }
         }
@@ -76,8 +74,6 @@ struct LocalStorage{
         
         profilingIndexes+=indexes
         
-        print(profilingIndexes.removingDuplicates())
-        
         self.setProfiling(indexes: profilingIndexes.removingDuplicates())
         
         return true
@@ -88,12 +84,12 @@ struct LocalStorage{
 extension Array where Element: Hashable {
     func removingDuplicates() -> [Element] {
         var addedDict = [Element: Bool]()
-
+        
         return filter {
             addedDict.updateValue(true, forKey: $0) == nil
         }
     }
-
+    
     mutating func removeDuplicates() {
         self = self.removingDuplicates()
     }

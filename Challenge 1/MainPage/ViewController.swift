@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     var utils = Utils()
     var arrOfMovie: [Movie] = []
     var storage = LocalStorage()
-
+    
     
     //Outlet
     @IBOutlet weak var imageBackground: UIImageView!
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-//        arrOfMovie = utils.retrieveData()
+        //        arrOfMovie = utils.retrieveData()
         
         
         storage.saveMovies()
@@ -50,17 +50,17 @@ class ViewController: UIViewController {
         storage.setProfiling(indexes: [0,1,2])
         let datas = utils.getRecommendations(indexes:storage.getProfiling())
         storage.updateProfiling(indexes: [0,1,3])
-//        print(datas)
-//        let status = storage.set(data: "halo", key: "profiling")
+        //        print(datas)
+        //        let status = storage.set(data: "halo", key: "profiling")
         
         
-//        if status == true{
-//            let profile = storage.get(key: "profiling")
-//            print(profile)
-//        }
-//        print(status)
-
-//        print("jumlah data = \(datas.count)")
+        //        if status == true{
+        //            let profile = storage.get(key: "profiling")
+        //            print(profile)
+        //        }
+        //        print(status)
+        
+        //        print("jumlah data = \(datas.count)")
     }
     
     
