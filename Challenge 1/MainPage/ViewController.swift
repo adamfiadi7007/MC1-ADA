@@ -44,6 +44,16 @@ class ViewController: UIViewController {
         imageBackground.loadFrom(URLAddress: arrOfMovie[0].moiveImageUrl ?? "")
         
         let datas = utils.getRecommendations(indexes: [0,1,3])
+        
+        let status = storage.set(data: "halo", key: "profiling")
+        
+        
+        if status == true{
+            let profile = storage.get(key: "profiling")
+            print(profile)
+        }
+        print(status)
+        
 //        print("jumlah data = \(datas.count)")
     }
     

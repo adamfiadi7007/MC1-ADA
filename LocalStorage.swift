@@ -13,7 +13,8 @@ struct LocalStorage{
     
     func set(data:String, key:String) -> Bool{
         do{
-            userDefault.set(data, forKey: "key")
+            userDefault.set(data, forKey: key)
+            print(data)
         }catch{
             return false
         }
