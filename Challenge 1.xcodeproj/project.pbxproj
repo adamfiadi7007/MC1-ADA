@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1DDE12AE280430FE00438774 /* HomeExternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE12AD280430FE00438774 /* HomeExternal.swift */; };
 		1DDE12B328043A2000438774 /* OnboardingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DDE12B228043A2000438774 /* OnboardingView.storyboard */; };
 		1DDE12B628043B7A00438774 /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE12B528043B7A00438774 /* CornerRadius.swift */; };
 		1DDE12B828043F0200438774 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE12B728043F0200438774 /* OnboardingViewController.swift */; };
@@ -33,7 +32,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1DDE12AD280430FE00438774 /* HomeExternal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExternal.swift; sourceTree = "<group>"; };
 		1DDE12B228043A2000438774 /* OnboardingView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnboardingView.storyboard; sourceTree = "<group>"; };
 		1DDE12B528043B7A00438774 /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
 		1DDE12B728043F0200438774 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 			children = (
 				364EFDDF27FC2D3700779EB7 /* Main.storyboard */,
 				364EFDDD27FC2D3700779EB7 /* ViewController.swift */,
-				1DDE12AD280430FE00438774 /* HomeExternal.swift */,
 			);
 			path = MainPage;
 			sourceTree = "<group>";
@@ -260,7 +257,6 @@
 				1DDE12B828043F0200438774 /* OnboardingViewController.swift in Sources */,
 				1DDE12B628043B7A00438774 /* CornerRadius.swift in Sources */,
 				1DDE12BC28054AB500438774 /* OnboardingCollectionViewCell.swift in Sources */,
-				1DDE12AE280430FE00438774 /* HomeExternal.swift in Sources */,
 				364EFE0027FF3F4C00779EB7 /* WatchListViewController.swift in Sources */,
 				364EFDDE27FC2D3700779EB7 /* ViewController.swift in Sources */,
 				364EFDDA27FC2D3700779EB7 /* AppDelegate.swift in Sources */,
