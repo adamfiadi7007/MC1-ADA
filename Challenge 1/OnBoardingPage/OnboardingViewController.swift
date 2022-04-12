@@ -14,7 +14,7 @@ class OnboardingViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     
     var slides: [OnboardingSlide] = []
-    
+    let storage = LocalStorage()
     var currentPage = 0 {
         didSet {
             pageControl.currentPage = currentPage
@@ -38,7 +38,10 @@ class OnboardingViewController: UIViewController {
     @IBAction func nextBtnClicked(_ sender: UIButton) {
         
         if currentPage == slides.count - 1 {
-            print("Go To The Home")
+            storage.setStorage(indexes: [0,1], key: "userProfilingData")
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = storyBoard.instantiateViewController(withIdentifier: "ViewController")
+            self.present(viewController, animated: true, completion: nil)
         } else {
             currentPage += 1
             let indexPath = IndexPath(item: currentPage, section: 0)
