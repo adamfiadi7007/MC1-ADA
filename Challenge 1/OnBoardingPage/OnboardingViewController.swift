@@ -38,11 +38,6 @@ class OnboardingViewController: UIViewController {
     @IBAction func nextBtnClicked(_ sender: UIButton) {
         
         if currentPage == slides.count - 1 {
-            //            let selectedMovies = [0,1]
-            //            storage.setStorage(indexes: selectedMovies, key: "userProfilingData")
-            //            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            //            let viewController = storyBoard.instantiateViewController(withIdentifier: "ViewController")
-            //            self.present(viewController, animated: true, completion: nil)
             let storyBoard = UIStoryboard(name: "UserProfilingView", bundle: nil)
             let viewController = storyBoard.instantiateViewController(withIdentifier: "UserProfilingViewController")
             self.present(viewController, animated: true, completion: nil)

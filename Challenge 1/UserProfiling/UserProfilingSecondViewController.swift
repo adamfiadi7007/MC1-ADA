@@ -8,17 +8,19 @@
 import UIKit
 
 class UserProfilingSecondViewController: UIViewController {
-
     
+    
+    @IBOutlet weak var showMeBtn: GradientButton!
     @IBOutlet weak var userProfilingCollectionView: UICollectionView!
     
     var utils = Utils()
     var arrOfMovie: [Movie] = []
     var storage = LocalStorage()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         //collecting data from movie
         userProfilingCollectionView.dataSource = self
         //making 2 cells in a row
@@ -32,13 +34,19 @@ class UserProfilingSecondViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func showMeBtnClicked(_ sender: Any) {
+
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "ViewController")
+        self.present(viewController, animated: true, completion: nil)
+    }
 }
 
 //collecting data from movie
 extension UserProfilingSecondViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return arrOfMovie.count
-        return 4
+        return arrOfMovie.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -59,7 +67,6 @@ extension UserProfilingSecondViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! UserProfilingSecondCollectionViewCell
         cell.clicked(with: arrOfMovie[indexPath.row])
-        print(arrOfMovie[indexPath.row].movieIndex)
     }
 }
 

@@ -30,7 +30,7 @@
                                 </attributedString>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ElB-7h-xfy">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ElB-7h-xfy">
                                 <rect key="frame" x="0.0" y="132" width="414" height="621"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="T9y-gz-PWX">
@@ -123,6 +123,9 @@
                                         <real key="value" value="23"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showMeBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7E7-Pt-wSO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -140,6 +143,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="showMeBtn" destination="rvR-VQ-6qW" id="N4m-36-nxz"/>
                         <outlet property="userProfilingCollectionView" destination="ElB-7h-xfy" id="YYl-ry-BiN"/>
                     </connections>
                 </viewController>
