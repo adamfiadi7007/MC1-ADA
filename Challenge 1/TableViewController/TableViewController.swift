@@ -16,7 +16,7 @@ class TableViewController: UITableViewController {
     
     // Cell ID Initiation
     let homeCellId = "HomeTableViewCell"
-    var appearMovieDesc = [MovieDescription]()
+    var appearMovieDesc = [Movie]()
     
     @IBOutlet var HomeTableCell: UITableView!
     
@@ -47,10 +47,11 @@ class TableViewController: UITableViewController {
 //        storage.updateStorage(indexes: [0,1,3], key:"userProfilingData")
         
         // Init Data
-        for movie in datas {
-            var movieDescription = MovieDescription()
-            movieDescription.title = movie.movieTitle ?? ""
-            movieDescription.bgImg = movie.movieImageUrl ?? ""
+        for movie in datas{
+            var movieDescription = Movie()
+            movieDescription.movieTitle = movie.movieTitle ?? ""
+            movieDescription.movieImageUrl = movie.movieImageUrl ?? ""
+            movieDescription.movieIndex = movie.movieIndex ?? -1
             appearMovieDesc.append(movieDescription)
         }
         tableView.reloadData()
@@ -62,11 +63,10 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: homeCellId, for: indexPath) as! HomeTableViewCell
-        
         let movieDescriptions = appearMovieDesc[indexPath.row]
-        cell.movieTitle.text = movieDescriptions.title
-        cell.backgroundImage.loadFrom(URLAddress: movieDescriptions.bgImg ?? "")
-        
+        cell.movieTitle.text = movieDescriptions.movieTitle
+        cell.backgroundImage.loadFrom(URLAddress: movieDescriptions.movieImageUrl ?? "")
+        cell.bookmarkButton.tag = movieDescriptions.movieIndex ?? -1
         return cell
     }
 
