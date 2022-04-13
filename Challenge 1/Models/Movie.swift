@@ -17,7 +17,7 @@ struct Movie:Codable{
     var movieInfoSeason: String?
     var movieRuntime: String?
     var movieGenre: String?
-    var moiveImageUrl: String?
+    var movieImageUrl: String?
     var movieListImages: [String]?
     var movieListActors: [Actor]?
     var movieStarsActors: String?

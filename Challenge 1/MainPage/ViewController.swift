@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         movieInfoYears.text = utils.getYear(date:datas[0].movieInfoYear ?? "")
         movieRuntime.text = utils.parseRunTimeToString(date: datas[0].movieRuntime ?? "")
         movieDescriptionText.text = datas[0].movieDescription
-        imageBackground.loadFrom(URLAddress: datas[0].moiveImageUrl ?? "")
+        imageBackground.loadFrom(URLAddress: datas[0].movieImageUrl ?? "")
         
     }
     

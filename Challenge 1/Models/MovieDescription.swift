@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 struct MovieDescription{
-    var bgImg: UIImage?
+    var bgImg: String?
     var title: String?
 //    required init?() {}
 }

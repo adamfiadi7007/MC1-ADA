@@ -9,6 +9,9 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
+    let utils = Utils()
+    
+    
 //    var titles: [String] = ["satu", "dua", "tiga"]
     
     // Cell ID Initiation
@@ -31,10 +34,23 @@ class TableViewController: UITableViewController {
         tableView.register(UINib.init(nibName: homeCellId, bundle: nil), forCellReuseIdentifier: homeCellId)
 //        tableView.separatorColor = UIColor.clear
         
+        self.tableView.isPagingEnabled = true;
+        
+//        arrOfMovie = storage.getMovies()
+//
+//        if arrOfMovie.count == 0 {
+//            storage.saveMovies()
+//            arrOfMovie = storage.getMovies()
+//        }
+        
+        let datas = utils.getRecommendations(indexes:[10,20,35])
+//        storage.updateStorage(indexes: [0,1,3], key:"userProfilingData")
+        
         // Init Data
-        for _ in 1...5 {
+        for movie in datas {
             var movieDescription = MovieDescription()
-            movieDescription.title = "Movie"
+            movieDescription.title = movie.movieTitle ?? ""
+            movieDescription.bgImg = movie.movieImageUrl ?? ""
             appearMovieDesc.append(movieDescription)
         }
         tableView.reloadData()
@@ -49,8 +65,10 @@ class TableViewController: UITableViewController {
         
         let movieDescriptions = appearMovieDesc[indexPath.row]
         cell.movieTitle.text = movieDescriptions.title
+        cell.backgroundImage.loadFrom(URLAddress: movieDescriptions.bgImg ?? "")
         
         return cell
     }
 
 }
+
