@@ -11,7 +11,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="6Ow-Cv-L9P">
             <objects>
-                <tabBarController id="Qr3-cO-nrW" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="overCurrentContext" id="Qr3-cO-nrW" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="72l-T9-uXg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -52,7 +52,7 @@
         <!--Table View Controller-->
         <scene sceneID="RlJ-NJ-4JK">
             <objects>
-                <tableViewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WZ1-au-sxj" customClass="TableViewController" customModule="Challenge_1" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WZ1-au-sxj" customClass="TableViewController" customModule="Challenge_1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="CHA-6f-fm6">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,21 +80,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="24f-v0-guG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-500" y="77"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="ccm-VJ-hwv">
-            <objects>
-                <viewController id="CBH-Hb-jO1" customClass="ViewController" customModule="Challenge_1" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="OkM-eR-pV4">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="hm9-3X-3tm"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6C2-SP-1ck" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-290" y="-661"/>
         </scene>
         <!--Item-->
         <scene sceneID="tne-QT-ifu">
@@ -215,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="970.76923076923072" y="-661.13744075829379"/>
+            <point key="canvasLocation" x="971" y="-661"/>
         </scene>
         <!--Item-->
         <scene sceneID="Kq5-y8-vQA">
