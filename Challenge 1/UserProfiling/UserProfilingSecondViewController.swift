@@ -32,13 +32,13 @@ class UserProfilingSecondViewController: UIViewController {
         }
     }
     
-
 }
 
 //collecting data from movie
 extension UserProfilingSecondViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+//        return arrOfMovie.count
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -50,13 +50,17 @@ extension UserProfilingSecondViewController: UICollectionViewDataSource {
 //making 2 cells in a row
 extension UserProfilingSecondViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 185, height: 240)
+        return CGSize(width: 180, height: 240)
     }
 }
 
 //making movie image can tap
 extension UserProfilingSecondViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(arrOfMovie[indexPath.row].movieTitle)
+        let cell = collectionView.cellForItem(at: indexPath) as! UserProfilingSecondCollectionViewCell
+        cell.clicked(with: arrOfMovie[indexPath.row])
+        print(arrOfMovie[indexPath.row].movieIndex)
     }
 }
+
+
