@@ -51,6 +51,7 @@ struct LocalStorage{
     }
     
     //simpen index movie yang disukai user
+    
     func setStorage(indexes:[Int], key:String) -> Bool{
         let encoder = JSONEncoder()
         if let indexList = try? encoder.encode(indexes) {
@@ -72,11 +73,19 @@ struct LocalStorage{
     }
     
     func updateStorage(indexes:[Int],key:String) -> Bool{
-        var profilingIndexes:[Int] = self.getStorage(key:key)
+        var allIndexes:[Int] = self.getStorage(key:key)
         
-        profilingIndexes+=indexes
+        allIndexes+=indexes
         
-        self.setStorage(indexes: profilingIndexes.removingDuplicates(),key:key)
+        self.setStorage(indexes: allIndexes.removingDuplicates(),key:key)
+        return true
+    }
+    
+    func removeWatchList(index: Int, key:String) -> Bool{
+        var indexes:[Int] = self.getStorage(key: key)
+        
+        indexes.removeEqualItems(index)
+        self.setStorage(indexes: indexes, key: key)
         return true
     }
     
@@ -95,3 +104,24 @@ extension Array where Element: Hashable {
         self = self.removingDuplicates()
     }
 }
+
+extension Array where Element: Equatable {
+  
+  mutating func removeEqualItems(_ item: Element) {
+    self = self.filter { (currentItem: Element) -> Bool in
+      return currentItem != item
+    }
+  }
+
+  mutating func removeFirstEqualItem(_ item: Element) {
+    guard var currentItem = self.first else { return }
+    var index = 0
+    while currentItem != item {
+      index += 1
+      currentItem = self[index]
+    }
+    self.remove(at: index)
+  }
+  
+}
+  

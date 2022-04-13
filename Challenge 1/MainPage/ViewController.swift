@@ -40,7 +40,6 @@ class ViewController: UIViewController {
         
         
         arrOfMovie = storage.getMovies()
-        
         if arrOfMovie.count == 0 {
             storage.saveMovies()
             arrOfMovie = storage.getMovies()
