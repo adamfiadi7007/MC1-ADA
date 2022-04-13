@@ -8,10 +8,25 @@
 import UIKit
 
 class WatchListViewController: UIViewController {
-
+    
+    let storage = LocalStorage()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        storage.saveMovies()
+        let watchlistIndexes = storage.getStorage(key: "userWatchlistData")
+        let movies = storage.getMovies()
+        for (idx,movie) in movies.enumerated() {
+            var watchlistMovie = Movie()
+            if watchlistIndexes.contains(idx){
+                watchlistMovie.movieImageUrl = movie.movieImageUrl
+                watchlistMovie.movieTitle = movie.movieTitle
+                watchlistMovie.movieStreamingApp = movie.movieStreamingApp
+            }
+        }
+        
+        
         // Do any additional setup after loading the view.
     }
     
