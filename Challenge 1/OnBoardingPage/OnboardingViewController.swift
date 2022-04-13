@@ -30,17 +30,21 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
         
         slides = [
-                    OnboardingSlide(title: "Welcome to Comvie", description: "Get Comvie, Get Movie Recommendation", image: #imageLiteral(resourceName: "Landing page card 1 2x")),
-                    OnboardingSlide(title: "It's Personalized", description: "No more endless scrolling down streaming app to find something to watch", image: #imageLiteral(resourceName: "Landing page card 2 2x")),
-                ]
+            OnboardingSlide(title: "Welcome to Comvie", description: "Get Comvie, Get Movie Recommendation", image: #imageLiteral(resourceName: "Landing page card 1 2x")),
+            OnboardingSlide(title: "It's Personalized!", description: "No more endless scrolling down streaming app to find something to watch", image: #imageLiteral(resourceName: "Landing page card 2 2x")),
+        ]
     }
-
+    
     @IBAction func nextBtnClicked(_ sender: UIButton) {
         
         if currentPage == slides.count - 1 {
-            storage.setStorage(indexes: [0,1], key: "userProfilingData")
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let viewController = storyBoard.instantiateViewController(withIdentifier: "ViewController")
+            //            let selectedMovies = [0,1]
+            //            storage.setStorage(indexes: selectedMovies, key: "userProfilingData")
+            //            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            //            let viewController = storyBoard.instantiateViewController(withIdentifier: "ViewController")
+            //            self.present(viewController, animated: true, completion: nil)
+            let storyBoard = UIStoryboard(name: "UserProfilingView", bundle: nil)
+            let viewController = storyBoard.instantiateViewController(withIdentifier: "UserProfilingViewController")
             self.present(viewController, animated: true, completion: nil)
         } else {
             currentPage += 1
