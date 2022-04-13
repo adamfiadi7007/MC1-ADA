@@ -74,6 +74,9 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="44"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="bookmarkButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="7dq-oC-Ucl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nu7-7z-IEo">
                                 <rect key="frame" x="317" y="430" width="59" height="100"/>
@@ -83,6 +86,9 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="44"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="checklistButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="pRJ-7B-ZSv"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFe-ti-fn6">
                                 <rect key="frame" x="332" y="424" width="27" height="22"/>
@@ -111,6 +117,8 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="backgroundImage" destination="Jj2-BG-oN2" id="Tak-qs-Ee9"/>
+                <outlet property="bookmarkButton" destination="xV6-wZ-9TW" id="7qx-V9-PK6"/>
+                <outlet property="checklistButton" destination="Nu7-7z-IEo" id="NLs-qy-6Tm"/>
                 <outlet property="movieTitle" destination="Vru-KC-bAb" id="27L-pe-pNa"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="113.16964285714285"/>
