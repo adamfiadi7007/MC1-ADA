@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D96D4202806BB1B00CD27A9 /* UserProfilingMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D96D41F2806BB1B00CD27A9 /* UserProfilingMovie.swift */; };
+		1D96D4222806CDD400CD27A9 /* UserProfilingSecondView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D96D4212806CDD400CD27A9 /* UserProfilingSecondView.storyboard */; };
+		1D96D4242806CF7700CD27A9 /* UserProfilingSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D96D4232806CF7700CD27A9 /* UserProfilingSecondViewController.swift */; };
+		1D96D4262806CFA600CD27A9 /* UserProfilingSecondCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D96D4252806CFA600CD27A9 /* UserProfilingSecondCollectionViewCell.swift */; };
+		1DDE12CD2805DCBE00438774 /* UserProfilingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DDE12CC2805DCBE00438774 /* UserProfilingView.storyboard */; };
+		1DDE12CF2805DCD700438774 /* UserProfilingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE12CE2805DCD700438774 /* UserProfilingViewController.swift */; };
+		1DDE12D12805E50000438774 /* CheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE12D02805E50000438774 /* CheckBoxButton.swift */; };
 		3601837C280481B40057B92A /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3601837A280481B40057B92A /* HomeTableViewCell.swift */; };
 		3601837D280481B40057B92A /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3601837B280481B40057B92A /* HomeTableViewCell.xib */; };
 		364EFDDA27FC2D3700779EB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EFDD927FC2D3700779EB7 /* AppDelegate.swift */; };
@@ -44,6 +51,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D96D41F2806BB1B00CD27A9 /* UserProfilingMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilingMovie.swift; sourceTree = "<group>"; };
+		1D96D4212806CDD400CD27A9 /* UserProfilingSecondView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfilingSecondView.storyboard; sourceTree = "<group>"; };
+		1D96D4232806CF7700CD27A9 /* UserProfilingSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilingSecondViewController.swift; sourceTree = "<group>"; };
+		1D96D4252806CFA600CD27A9 /* UserProfilingSecondCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilingSecondCollectionViewCell.swift; sourceTree = "<group>"; };
+		1DDE12CC2805DCBE00438774 /* UserProfilingView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfilingView.storyboard; sourceTree = "<group>"; };
+		1DDE12CE2805DCD700438774 /* UserProfilingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilingViewController.swift; sourceTree = "<group>"; };
+		1DDE12D02805E50000438774 /* CheckBoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxButton.swift; sourceTree = "<group>"; };
 		3601837A280481B40057B92A /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		3601837B280481B40057B92A /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		364EFDD627FC2D3700779EB7 /* Challenge 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Challenge 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +107,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DDE12CB2805DC9B00438774 /* UserProfiling */ = {
+			isa = PBXGroup;
+			children = (
+				1DDE12CC2805DCBE00438774 /* UserProfilingView.storyboard */,
+				1D96D4212806CDD400CD27A9 /* UserProfilingSecondView.storyboard */,
+				1DDE12CE2805DCD700438774 /* UserProfilingViewController.swift */,
+				1D96D4232806CF7700CD27A9 /* UserProfilingSecondViewController.swift */,
+				1D96D4252806CFA600CD27A9 /* UserProfilingSecondCollectionViewCell.swift */,
+			);
+			path = UserProfiling;
+			sourceTree = "<group>";
+		};
 		360183792804818E0057B92A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +150,7 @@
 		364EFDD827FC2D3700779EB7 /* Challenge 1 */ = {
 			isa = PBXGroup;
 			children = (
+				1DDE12CB2805DC9B00438774 /* UserProfiling */,
 				E6CF4B7428058CFE00D3041A /* OnBoardingPage */,
 				E6CF4B6F28058CE400D3041A /* Extension */,
 				360183792804818E0057B92A /* Cell */,
@@ -199,6 +226,7 @@
 				E61C15AB280061340052A480 /* Actor.swift */,
 				E6D7B0262805D4B000105025 /* OnboardingSlide.swift */,
 				E6D7B0282805D6AD00105025 /* MovieDescription.swift */,
+				1D96D41F2806BB1B00CD27A9 /* UserProfilingMovie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -217,6 +245,7 @@
 			children = (
 				E6CF4B7028058CE400D3041A /* GradientButton.swift */,
 				E6CF4B7128058CE400D3041A /* CornerRadius.swift */,
+				1DDE12D02805E50000438774 /* CheckBoxButton.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -294,7 +323,9 @@
 				3601837D280481B40057B92A /* HomeTableViewCell.xib in Resources */,
 				369E8796280702CD00AA582C /* SecondMovDescCollectionViewCell.xib in Resources */,
 				364EFDE627FC2D3800779EB7 /* LaunchScreen.storyboard in Resources */,
+				1DDE12CD2805DCBE00438774 /* UserProfilingView.storyboard in Resources */,
 				364EFDE327FC2D3800779EB7 /* Assets.xcassets in Resources */,
+				1D96D4222806CDD400CD27A9 /* UserProfilingSecondView.storyboard in Resources */,
 				E61C15A7280060570052A480 /* movie_details.csv in Resources */,
 				369E879A280702E300AA582C /* ThirdMovDescCollectionViewCell.xib in Resources */,
 				369E8792280702AB00AA582C /* FirstMovDescCollectionViewCell.xib in Resources */,
@@ -312,12 +343,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6D7B0292805D6AD00105025 /* MovieDescription.swift in Sources */,
+				1D96D4262806CFA600CD27A9 /* UserProfilingSecondCollectionViewCell.swift in Sources */,
 				364EFE0027FF3F4C00779EB7 /* WatchListViewController.swift in Sources */,
 				369E8799280702E300AA582C /* ThirdMovDescCollectionViewCell.swift in Sources */,
+				1DDE12D12805E50000438774 /* CheckBoxButton.swift in Sources */,
 				364EFDDE27FC2D3700779EB7 /* ViewController.swift in Sources */,
 				E6CF4B7328058CE400D3041A /* CornerRadius.swift in Sources */,
+				1D96D4242806CF7700CD27A9 /* UserProfilingSecondViewController.swift in Sources */,
 				E6CF4B7928058CFE00D3041A /* OnboardingCollectionViewCell.swift in Sources */,
 				364EFDDA27FC2D3700779EB7 /* AppDelegate.swift in Sources */,
+				1D96D4202806BB1B00CD27A9 /* UserProfilingMovie.swift in Sources */,
 				364EFDF827FD493E00779EB7 /* SearchViewController.swift in Sources */,
 				369E87A92807107D00AA582C /* FourthMovDescCollectionViewCell.swift in Sources */,
 				E6CF4B7C28058CFE00D3041A /* OnboardingViewController.swift in Sources */,
@@ -333,6 +368,7 @@
 				4ED7D5E128055B3300ADEADE /* LocalStorage.swift in Sources */,
 				E61C15A22800382C0052A480 /* Utils.swift in Sources */,
 				E61C15AC280061340052A480 /* Actor.swift in Sources */,
+				1DDE12CF2805DCD700438774 /* UserProfilingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,7 +521,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Comvie;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = UserProfilingView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -514,7 +550,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Comvie;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = UserProfilingView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -18,6 +18,7 @@ class TableViewController: UITableViewController {
     let homeCellId = "HomeTableViewCell"
     var appearMovieDesc = [Movie]()
     var currentPage = 0
+    var storage = LocalStorage()
     
     @IBOutlet var HomeTableCell: UITableView!
     
@@ -37,14 +38,7 @@ class TableViewController: UITableViewController {
         
         self.tableView.isPagingEnabled = true;
         
-//        arrOfMovie = storage.getMovies()
-//
-//        if arrOfMovie.count == 0 {
-//            storage.saveMovies()
-//            arrOfMovie = storage.getMovies()
-//        }
-        
-        let datas = utils.getRecommendations(indexes:[10,20,35])
+        let datas = utils.getRecommendations(indexes: storage.getStorage(key: "userProfilingData"))
 //        storage.updateStorage(indexes: [0,1,3], key:"userProfilingData")
         
         // Init Data
