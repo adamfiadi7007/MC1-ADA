@@ -37,6 +37,7 @@ class TableViewController: UITableViewController {
 //        tableView.separatorColor = UIColor.clear
         
         self.tableView.isPagingEnabled = true;
+        self.tableView.tableHeaderView = nil;
         
         let datas = utils.getRecommendations(indexes: storage.getStorage(key: "userProfilingData"))
 //        storage.updateStorage(indexes: [0,1,3], key:"userProfilingData")
@@ -59,9 +60,12 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: homeCellId, for: indexPath) as! HomeTableViewCell
         let movieDescriptions = appearMovieDesc[indexPath.row]
-        cell.movieTitle.text = movieDescriptions.movieTitle
-        cell.backgroundImage.loadFrom(URLAddress: movieDescriptions.movieImageUrl ?? "")
-        cell.bookmarkButton.tag = movieDescriptions.movieIndex ?? -1
+        
+//        cell.movieTitle.text = movieDescriptions.movieTitle
+//        cell.backgroundImage.loadFrom(URLAddress: movieDescriptions.movieImageUrl ?? "")
+//        cell.bookmarkButton.tag = movieDescriptions.movieIndex ?? -1
+        cell.currentCell = indexPath.row
+        cell.currentTitle = movieDescriptions.movieTitle ?? ""
         return cell
     }
     

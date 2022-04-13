@@ -35,22 +35,6 @@ class FirstMovDescCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
 
         
-        
-        backgroundImage.image = UIImage(named: "10000-hours.png")
-        
-        let datas = utils.getRecommendations(indexes: storage.getStorage(key: "userProfilingData"))
-        
-        // Init Data
-//        for movie in datas{
-//            var movieDescription = Movie()
-//            movieDescription.movieTitle = movie.movieTitle ?? ""
-//            movieDescription.movieImageUrl = movie.movieImageUrl ?? ""
-//            movieDescription.movieIndex = movie.movieIndex ?? -1
-//            appearMovieDesc.append(movieDescription)
-//        }
-        
     }
     
-    override func
-
 }

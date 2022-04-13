@@ -8,6 +8,13 @@
 import UIKit
 
 class HomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    let utils = Utils()
+    var appearMovieDesc = [Movie]()
+    var storage = LocalStorage()
+    var currentCell = 0
+    var currentTitle = ""
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4
     }
@@ -15,6 +22,10 @@ class HomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.item == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: firstMovDescId, for: indexPath) as! FirstMovDescCollectionViewCell
+            let movieDescriptions = appearMovieDesc[currentCell]
+            cell.movieTitle.text = currentTitle
+            cell.backgroundImage.loadFrom(URLAddress: movieDescriptions.movieImageUrl ?? "")
+//            print(self.currentCell)
             return cell
         }
         else if indexPath.item == 1 {
@@ -36,8 +47,6 @@ class HomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 390, height: 860)
     }
-
-    var storage = LocalStorage()
     
     // Cell ID Initiation
     let firstMovDescId = "FirstMovDescCollectionViewCell"
@@ -75,6 +84,17 @@ class HomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
         collectionView.register(UINib.init(nibName: thirdMovDescId, bundle: nil), forCellWithReuseIdentifier: thirdMovDescId)
         collectionView.register(UINib.init(nibName: fourthMovDescId, bundle: nil), forCellWithReuseIdentifier: fourthMovDescId)
         
+        let datas = utils.getRecommendations(indexes: storage.getStorage(key: "userProfilingData"))
+//        storage.updateStorage(indexes: [0,1,3], key:"userProfilingData")
+        
+        // Init Data
+        for movie in datas{
+            var movieDescription = Movie()
+            movieDescription.movieTitle = movie.movieTitle ?? ""
+            movieDescription.movieImageUrl = movie.movieImageUrl ?? ""
+            movieDescription.movieIndex = movie.movieIndex ?? -1
+            appearMovieDesc.append(movieDescription)
+        }
         
         
     }
