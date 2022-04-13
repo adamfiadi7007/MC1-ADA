@@ -14,9 +14,7 @@ class HomeTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        contentView.heightAnchor
-        
+                
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
