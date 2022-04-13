@@ -9,6 +9,11 @@ import UIKit
 
 class FirstMovDescCollectionViewCell: UICollectionViewCell {
 
+    let utils = Utils()
+    
+    var appearMovieDesc = [Movie]()
+    var storage = LocalStorage()
+    
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var movieDescription: UILabel!
@@ -26,10 +31,26 @@ class FirstMovDescCollectionViewCell: UICollectionViewCell {
     
     
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
+        
+        
+        backgroundImage.image = UIImage(named: "10000-hours.png")
+        
+        let datas = utils.getRecommendations(indexes: storage.getStorage(key: "userProfilingData"))
+        
+        // Init Data
+//        for movie in datas{
+//            var movieDescription = Movie()
+//            movieDescription.movieTitle = movie.movieTitle ?? ""
+//            movieDescription.movieImageUrl = movie.movieImageUrl ?? ""
+//            movieDescription.movieIndex = movie.movieIndex ?? -1
+//            appearMovieDesc.append(movieDescription)
+//        }
+        
     }
+    
+    override func
 
 }
