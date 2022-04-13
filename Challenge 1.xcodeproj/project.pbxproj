@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D96D41E2806B94800CD27A9 /* UserProfilingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D96D41D2806B94800CD27A9 /* UserProfilingCollectionViewCell.swift */; };
 		1D96D4202806BB1B00CD27A9 /* UserProfilingMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D96D41F2806BB1B00CD27A9 /* UserProfilingMovie.swift */; };
+		1D96D4222806CDD400CD27A9 /* UserProfilingSecondView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D96D4212806CDD400CD27A9 /* UserProfilingSecondView.storyboard */; };
+		1D96D4242806CF7700CD27A9 /* UserProfilingSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D96D4232806CF7700CD27A9 /* UserProfilingSecondViewController.swift */; };
+		1D96D4262806CFA600CD27A9 /* UserProfilingSecondCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D96D4252806CFA600CD27A9 /* UserProfilingSecondCollectionViewCell.swift */; };
 		1DDE12CD2805DCBE00438774 /* UserProfilingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DDE12CC2805DCBE00438774 /* UserProfilingView.storyboard */; };
 		1DDE12CF2805DCD700438774 /* UserProfilingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE12CE2805DCD700438774 /* UserProfilingViewController.swift */; };
 		1DDE12D12805E50000438774 /* CheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE12D02805E50000438774 /* CheckBoxButton.swift */; };
@@ -41,8 +43,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1D96D41D2806B94800CD27A9 /* UserProfilingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilingCollectionViewCell.swift; sourceTree = "<group>"; };
 		1D96D41F2806BB1B00CD27A9 /* UserProfilingMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilingMovie.swift; sourceTree = "<group>"; };
+		1D96D4212806CDD400CD27A9 /* UserProfilingSecondView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfilingSecondView.storyboard; sourceTree = "<group>"; };
+		1D96D4232806CF7700CD27A9 /* UserProfilingSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilingSecondViewController.swift; sourceTree = "<group>"; };
+		1D96D4252806CFA600CD27A9 /* UserProfilingSecondCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilingSecondCollectionViewCell.swift; sourceTree = "<group>"; };
 		1DDE12CC2805DCBE00438774 /* UserProfilingView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfilingView.storyboard; sourceTree = "<group>"; };
 		1DDE12CE2805DCD700438774 /* UserProfilingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilingViewController.swift; sourceTree = "<group>"; };
 		1DDE12D02805E50000438774 /* CheckBoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxButton.swift; sourceTree = "<group>"; };
@@ -91,8 +95,10 @@
 			isa = PBXGroup;
 			children = (
 				1DDE12CC2805DCBE00438774 /* UserProfilingView.storyboard */,
+				1D96D4212806CDD400CD27A9 /* UserProfilingSecondView.storyboard */,
 				1DDE12CE2805DCD700438774 /* UserProfilingViewController.swift */,
-				1D96D41D2806B94800CD27A9 /* UserProfilingCollectionViewCell.swift */,
+				1D96D4232806CF7700CD27A9 /* UserProfilingSecondViewController.swift */,
+				1D96D4252806CFA600CD27A9 /* UserProfilingSecondCollectionViewCell.swift */,
 			);
 			path = UserProfiling;
 			sourceTree = "<group>";
@@ -285,6 +291,7 @@
 				364EFDE627FC2D3800779EB7 /* LaunchScreen.storyboard in Resources */,
 				1DDE12CD2805DCBE00438774 /* UserProfilingView.storyboard in Resources */,
 				364EFDE327FC2D3800779EB7 /* Assets.xcassets in Resources */,
+				1D96D4222806CDD400CD27A9 /* UserProfilingSecondView.storyboard in Resources */,
 				E61C15A7280060570052A480 /* movie_details.csv in Resources */,
 				364EFDE127FC2D3700779EB7 /* Main.storyboard in Resources */,
 				E6CF4B7A28058CFE00D3041A /* OnboardingView.storyboard in Resources */,
@@ -300,11 +307,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6D7B0292805D6AD00105025 /* MovieDescription.swift in Sources */,
+				1D96D4262806CFA600CD27A9 /* UserProfilingSecondCollectionViewCell.swift in Sources */,
 				364EFE0027FF3F4C00779EB7 /* WatchListViewController.swift in Sources */,
 				1DDE12D12805E50000438774 /* CheckBoxButton.swift in Sources */,
-				1D96D41E2806B94800CD27A9 /* UserProfilingCollectionViewCell.swift in Sources */,
 				364EFDDE27FC2D3700779EB7 /* ViewController.swift in Sources */,
 				E6CF4B7328058CE400D3041A /* CornerRadius.swift in Sources */,
+				1D96D4242806CF7700CD27A9 /* UserProfilingSecondViewController.swift in Sources */,
 				E6CF4B7928058CFE00D3041A /* OnboardingCollectionViewCell.swift in Sources */,
 				364EFDDA27FC2D3700779EB7 /* AppDelegate.swift in Sources */,
 				1D96D4202806BB1B00CD27A9 /* UserProfilingMovie.swift in Sources */,
