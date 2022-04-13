@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 struct Movie:Codable{
+    var movieIndex: Int?
     var movieTitleId: String?
     var movieTitle: String?
     var movieDescription: String?
