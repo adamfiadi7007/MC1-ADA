@@ -7,9 +7,43 @@
 
 import UIKit
 
-class HomeTableViewCell: UITableViewCell {
+class HomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if indexPath.item == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: firstMovDescId, for: indexPath) as! FirstMovDescCollectionViewCell
+            return cell
+        }
+        else if indexPath.item == 1 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: secondtMovDescId, for: indexPath) as! SecondMovDescCollectionViewCell
+            return cell
+        }
+        else if indexPath.item == 2 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: thirdMovDescId, for: indexPath) as! ThirdMovDescCollectionViewCell
+            return cell
+        }
+        else if indexPath.item == 3 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: fourthMovDescId, for: indexPath) as! FourthMovDescCollectionViewCell
+            return cell
+        }
+        return UICollectionViewCell()
+    }
+    
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 390, height: 860)
+    }
 
     var storage = LocalStorage()
+    
+    // Cell ID Initiation
+    let firstMovDescId = "FirstMovDescCollectionViewCell"
+    let secondtMovDescId = "SecondMovDescCollectionViewCell"
+    let thirdMovDescId = "ThirdMovDescCollectionViewCell"
+    let fourthMovDescId = "FourthMovDescCollectionViewCell"
     
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var movieTitle: UILabel!
@@ -27,10 +61,22 @@ class HomeTableViewCell: UITableViewCell {
     
     //add target
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
                 
+        self.collectionView.dataSource = self
+        self.collectionView.delegate = self
+        
+        collectionView.register(UINib.init(nibName: firstMovDescId, bundle: nil), forCellWithReuseIdentifier: firstMovDescId)
+        collectionView.register(UINib.init(nibName: secondtMovDescId, bundle: nil), forCellWithReuseIdentifier: secondtMovDescId)
+        collectionView.register(UINib.init(nibName: thirdMovDescId, bundle: nil), forCellWithReuseIdentifier: thirdMovDescId)
+        collectionView.register(UINib.init(nibName: fourthMovDescId, bundle: nil), forCellWithReuseIdentifier: fourthMovDescId)
+        
+        
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -75,5 +121,7 @@ class HomeTableViewCell: UITableViewCell {
             print(storage.getStorage(key: "userWatchedData"))
         }
     }
+    
+    
     
 }

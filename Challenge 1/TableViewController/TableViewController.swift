@@ -17,6 +17,7 @@ class TableViewController: UITableViewController {
     // Cell ID Initiation
     let homeCellId = "HomeTableViewCell"
     var appearMovieDesc = [Movie]()
+    var currentPage = 0
     
     @IBOutlet var HomeTableCell: UITableView!
     
@@ -69,6 +70,10 @@ class TableViewController: UITableViewController {
         cell.bookmarkButton.tag = movieDescriptions.movieIndex ?? -1
         return cell
     }
+    
+//    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//            let width = scrollView.frame.width
+//            currentPage = Int(scrollView.contentOffset.x / width)
+//        }
 
 }
-
