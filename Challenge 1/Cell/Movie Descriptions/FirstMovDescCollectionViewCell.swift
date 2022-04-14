@@ -8,7 +8,7 @@
 import UIKit
 
 class FirstMovDescCollectionViewCell: UICollectionViewCell {
-
+    
     let utils = Utils()
     
     var appearMovieDesc = [Movie]()
@@ -36,8 +36,6 @@ class FirstMovDescCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
-        
     }
     
     @IBAction func handleWatchedButton(_ sender: UIButton) {
@@ -46,13 +44,11 @@ class FirstMovDescCollectionViewCell: UICollectionViewCell {
             checklist = false
             WatchedLabel.text="Watched?"
             storage.removeWatchList(index: sender.tag, key: "userWatchedData")
-            print(storage.getStorage(key: "userWatchedData"))
         }else{
             checklistButton.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .normal)
             checklist = true
             WatchedLabel.text="Watched"
             storage.updateStorage(indexes: [sender.tag], key: "userWatchedData")
-            print(storage.getStorage(key: "userWatchedData"))
         }
     }
     @IBAction func handleBookmarkButton(_ sender: UIButton) {
@@ -61,13 +57,11 @@ class FirstMovDescCollectionViewCell: UICollectionViewCell {
             booked = false
             WatchlistLabel.text="Add"
             storage.removeWatchList(index: sender.tag, key: "userWatchlistData")
-            print(storage.getStorage(key: "userWatchlistData"))
         }else{
             bookmarkButton.setImage(UIImage(systemName: "bookmark.circle.fill"), for: .normal)
             booked = true
             WatchlistLabel.text="Added"
             storage.updateStorage(indexes: [sender.tag], key: "userWatchlistData")
-            print(storage.getStorage(key: "userWatchlistData"))
         }
     }
 }

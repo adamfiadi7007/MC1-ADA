@@ -8,7 +8,7 @@
 import UIKit
 
 class SecondMovDescCollectionViewCell: UICollectionViewCell {
-    
+    @IBOutlet weak var backgroundImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="860"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg-img-home" translatesAutoresizingMaskIntoConstraints="NO" id="eb3-3y-RGE">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eb3-3y-RGE">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="860"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -165,12 +165,14 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="backgroundImage" destination="eb3-3y-RGE" id="0N7-Xa-9i2"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="95.758928571428569"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="Terbaru bangetttt" width="250" height="257.5"/>
-        <image name="bg-img-home" width="390" height="844"/>
         <image name="bookmark.circle" catalog="system" width="128" height="121"/>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <image name="happy" width="5616" height="3744"/>

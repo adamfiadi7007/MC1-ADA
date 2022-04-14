@@ -8,7 +8,7 @@
 import UIKit
 
 class TableViewController: UIViewController {
-
+    
     let utils = Utils()
     
     // Cell ID Initiation

@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="860"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg-img-home" translatesAutoresizingMaskIntoConstraints="NO" id="6Bd-O1-i38">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Bd-O1-i38">
                                 <rect key="frame" x="0.0" y="0.0" width="382" height="860"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -169,12 +169,14 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="backgroundImage" destination="6Bd-O1-i38" id="cMO-lI-anr"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="95.758928571428569"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="10000-hours" width="3024" height="3780"/>
-        <image name="bg-img-home" width="390" height="844"/>
         <image name="bookmark.circle" catalog="system" width="128" height="121"/>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
     </resources>

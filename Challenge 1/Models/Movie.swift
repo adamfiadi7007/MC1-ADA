@@ -28,7 +28,7 @@ struct Movie:Codable{
     var movieRatings: String?
     var movieNumVotes: Int?
     
-
+    
     static func == (lhs: Movie, rhs: Movie) -> Bool {
         return lhs.movieTitleId == rhs.movieTitleId
     }
