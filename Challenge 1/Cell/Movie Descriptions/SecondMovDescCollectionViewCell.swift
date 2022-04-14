@@ -8,7 +8,7 @@
 import UIKit
 
 class SecondMovDescCollectionViewCell: UICollectionViewCell {
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

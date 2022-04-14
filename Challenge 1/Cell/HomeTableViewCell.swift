@@ -7,46 +7,12 @@
 
 import UIKit
 
-class HomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class HomeTableViewCell: UITableViewCell {
     
     let utils = Utils()
-    var appearMovieDesc = [Movie]()
+    var movieDatas = [Movie]()
     var storage = LocalStorage()
     var currentCell = 0
-    var currentTitle = ""
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.item == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: firstMovDescId, for: indexPath) as! FirstMovDescCollectionViewCell
-            let movieDescriptions = appearMovieDesc[currentCell]
-            cell.movieTitle.text = currentTitle
-            cell.backgroundImage.loadFrom(URLAddress: movieDescriptions.movieImageUrl ?? "")
-//            print(self.currentCell)
-            return cell
-        }
-        else if indexPath.item == 1 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: secondtMovDescId, for: indexPath) as! SecondMovDescCollectionViewCell
-            return cell
-        }
-        else if indexPath.item == 2 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: thirdMovDescId, for: indexPath) as! ThirdMovDescCollectionViewCell
-            return cell
-        }
-        else if indexPath.item == 3 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: fourthMovDescId, for: indexPath) as! FourthMovDescCollectionViewCell
-            return cell
-        }
-        return UICollectionViewCell()
-    }
-    
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 390, height: 860)
-    }
     
     // Cell ID Initiation
     let firstMovDescId = "FirstMovDescCollectionViewCell"
@@ -79,23 +45,26 @@ class HomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         
-        collectionView.register(UINib.init(nibName: firstMovDescId, bundle: nil), forCellWithReuseIdentifier: firstMovDescId)
-        collectionView.register(UINib.init(nibName: secondtMovDescId, bundle: nil), forCellWithReuseIdentifier: secondtMovDescId)
-        collectionView.register(UINib.init(nibName: thirdMovDescId, bundle: nil), forCellWithReuseIdentifier: thirdMovDescId)
-        collectionView.register(UINib.init(nibName: fourthMovDescId, bundle: nil), forCellWithReuseIdentifier: fourthMovDescId)
+        self.collectionView.register(UINib.init(nibName: firstMovDescId, bundle: nil), forCellWithReuseIdentifier: firstMovDescId)
+        self.collectionView.register(UINib.init(nibName: secondtMovDescId, bundle: nil), forCellWithReuseIdentifier: secondtMovDescId)
+        self.collectionView.register(UINib.init(nibName: thirdMovDescId, bundle: nil), forCellWithReuseIdentifier: thirdMovDescId)
+        self.collectionView.register(UINib.init(nibName: fourthMovDescId, bundle: nil), forCellWithReuseIdentifier: fourthMovDescId)
         
         let datas = utils.getRecommendations(indexes: storage.getStorage(key: "userProfilingData"))
 //        storage.updateStorage(indexes: [0,1,3], key:"userProfilingData")
         
         // Init Data
         for movie in datas{
-            var movieDescription = Movie()
-            movieDescription.movieTitle = movie.movieTitle ?? ""
-            movieDescription.movieImageUrl = movie.movieImageUrl ?? ""
-            movieDescription.movieIndex = movie.movieIndex ?? -1
-            appearMovieDesc.append(movieDescription)
+            var temp = Movie()
+            temp.movieTitle = movie.movieTitle ?? ""
+            temp.movieImageUrl = movie.movieImageUrl ?? ""
+            temp.movieIndex = movie.movieIndex ?? -1
+            temp.movieDescription = movie.movieDescription ?? ""
+            temp.movieRuntime = utils.parseRunTimeToString(date: movie.movieRuntime ?? "0")
+            temp.movieInfoYear = utils.getYear(date: movie.movieInfoYear ?? "")
+            temp.movieRatings = movie.movieRatings ?? ""
+            movieDatas.append(temp)
         }
-        
         
     }
 
@@ -111,14 +80,12 @@ class HomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
             booked = false
             WatchlistLabel.text="Add"
             storage.removeWatchList(index: sender.tag, key: "userWatchlistData")
-//            print("remove watchlist")
             print(storage.getStorage(key: "userWatchlistData"))
         }else{
             bookmarkButton.setImage(UIImage(systemName: "bookmark.circle.fill"), for: .normal)
             booked = true
             WatchlistLabel.text="Added"
             storage.updateStorage(indexes: [sender.tag], key: "userWatchlistData")
-//            print("add watchlist")
             print(storage.getStorage(key: "userWatchlistData"))
         }
     }
@@ -130,18 +97,51 @@ class HomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
             checklist = false
             WatchedLabel.text="Watched?"
             storage.removeWatchList(index: sender.tag, key: "userWatchedData")
-//            print("remove watched")
             print(storage.getStorage(key: "userWatchedData"))
         }else{
             checklistButton.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .normal)
             checklist = true
             WatchedLabel.text="Watched"
             storage.updateStorage(indexes: [sender.tag], key: "userWatchedData")
-//            print("add watched")
             print(storage.getStorage(key: "userWatchedData"))
         }
     }
+}
+
+extension HomeTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
     
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if indexPath.item == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: firstMovDescId, for: indexPath) as! FirstMovDescCollectionViewCell
+            let movies = movieDatas[currentCell]
+            cell.movieTitle.text = movies.movieTitle ?? ""
+            cell.backgroundImage.loadFrom(URLAddress: movies.movieImageUrl ?? "")
+            cell.movieDescription.text = movies.movieDescription ?? ""
+            cell.movieRuntime.text = movies.movieRuntime ?? ""
+            cell.movieYear.text = movies.movieInfoYear ?? ""
+            cell.movieRating.text = movies.movieRatings ?? ""
+            return cell
+        }
+        else if indexPath.item == 1 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: secondtMovDescId, for: indexPath) as! SecondMovDescCollectionViewCell
+            return cell
+        }
+        else if indexPath.item == 2 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: thirdMovDescId, for: indexPath) as! ThirdMovDescCollectionViewCell
+            return cell
+        }
+        else if indexPath.item == 3 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: fourthMovDescId, for: indexPath) as! FourthMovDescCollectionViewCell
+            return cell
+        }
+        return UICollectionViewCell()
+    }
     
-    
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 390, height: 860)
+    }
 }

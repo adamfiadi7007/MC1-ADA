@@ -25,7 +25,7 @@ struct Movie:Codable{
     var movieDirectors: String?
     var movieStreamingApp: String?
     var movieTrailer: String?
-    var movieRatings: Double?
+    var movieRatings: String?
     var movieNumVotes: Int?
     
 

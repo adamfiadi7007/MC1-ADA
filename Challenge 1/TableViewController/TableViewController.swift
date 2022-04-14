@@ -7,12 +7,9 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class TableViewController: UIViewController {
 
     let utils = Utils()
-    
-    
-//    var titles: [String] = ["satu", "dua", "tiga"]
     
     // Cell ID Initiation
     let homeCellId = "HomeTableViewCell"
@@ -27,20 +24,15 @@ class TableViewController: UITableViewController {
         
         // Hide Navigation & fixing the height of row
         navigationController?.isNavigationBarHidden = true
-        tableView.rowHeight = view.frame.height
+        HomeTableCell.rowHeight = view.frame.height
         
-//        tableView.estimatedRowHeight = view.frame.height
-        
-    
         // Registering Table View
-        tableView.register(UINib.init(nibName: homeCellId, bundle: nil), forCellReuseIdentifier: homeCellId)
-//        tableView.separatorColor = UIColor.clear
+        HomeTableCell.register(UINib.init(nibName: homeCellId, bundle: nil), forCellReuseIdentifier: homeCellId)
         
-        self.tableView.isPagingEnabled = true;
-        self.tableView.tableHeaderView = nil;
+        self.HomeTableCell.isPagingEnabled = true;
+        self.HomeTableCell.tableHeaderView = nil;
         
         let datas = utils.getRecommendations(indexes: storage.getStorage(key: "userProfilingData"))
-//        storage.updateStorage(indexes: [0,1,3], key:"userProfilingData")
         
         // Init Data
         for movie in datas{
@@ -50,28 +42,19 @@ class TableViewController: UITableViewController {
             movieDescription.movieIndex = movie.movieIndex ?? -1
             appearMovieDesc.append(movieDescription)
         }
-        tableView.reloadData()
+        HomeTableCell.reloadData()
     }
+}
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension TableViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return appearMovieDesc.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: homeCellId, for: indexPath) as! HomeTableViewCell
-        let movieDescriptions = appearMovieDesc[indexPath.row]
-        
-//        cell.movieTitle.text = movieDescriptions.movieTitle
-//        cell.backgroundImage.loadFrom(URLAddress: movieDescriptions.movieImageUrl ?? "")
-//        cell.bookmarkButton.tag = movieDescriptions.movieIndex ?? -1
         cell.currentCell = indexPath.row
-        cell.currentTitle = movieDescriptions.movieTitle ?? ""
+        cell.collectionView.reloadData()
         return cell
     }
-    
-//    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-//            let width = scrollView.frame.width
-//            currentPage = Int(scrollView.contentOffset.x / width)
-//        }
-
 }

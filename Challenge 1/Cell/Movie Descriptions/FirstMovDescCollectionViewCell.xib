@@ -23,10 +23,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="860"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5e-YP-tWg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5e-YP-tWg">
                                 <rect key="frame" x="21" y="519" width="252" height="229"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel blandit eros. Suspendisse aliquet nisi vel odio elementum consequat. Maecenas est nisl, facilisis rutrum suscipit ut, maximus ac elit. Nulla id magna venenatis, consectetur dui eget, mattis lorem.</string>
                                 <fontDescription key="fontDescription" name="NotoSansOriya" family="Noto Sans Oriya" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -39,6 +38,9 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="44"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="handleBookmarkButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="wEz-Fu-fTI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mit-6v-25U">
                                 <rect key="frame" x="320" y="396" width="59" height="100"/>
@@ -48,6 +50,9 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="44"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="handleWatchedButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="oJQ-jA-suL"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Watched?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCy-q7-tGJ">
                                 <rect key="frame" x="316" y="479" width="66" height="22"/>
@@ -113,7 +118,7 @@
                 <outlet property="backgroundImage" destination="qN0-mu-c08" id="pfd-Rd-arN"/>
                 <outlet property="bookmarkButton" destination="uTz-TY-duW" id="SYo-Qe-Yu3"/>
                 <outlet property="checklistButton" destination="Mit-6v-25U" id="i8x-ez-1cl"/>
-                <outlet property="movieDescription" destination="a5e-YP-tWg" id="4iD-il-22I"/>
+                <outlet property="movieDescription" destination="a5e-YP-tWg" id="PN8-Zc-2b6"/>
                 <outlet property="movieRating" destination="uhR-n6-O4X" id="kQn-dS-5SN"/>
                 <outlet property="movieRuntime" destination="8sK-h7-aii" id="J9d-Vu-FyX"/>
                 <outlet property="movieTitle" destination="cIK-b0-bVx" id="UFf-1H-rGZ"/>
