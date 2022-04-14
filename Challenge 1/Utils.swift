@@ -36,7 +36,7 @@ struct Utils{
             let ratings = row["average_ratings"] ?? ""
             let numVotes = row["num_votes"] ?? ""
             
-            let data = Movie(movieIndex: index,movieTitleId: (titleId as! String) , movieTitle: (title as! String) , movieDescription: description as! String, movieInfoYear: releaseDate as! String, movieInfoRating: releaseDate as! String, movieInfoSeason: releaseDate as! String, movieRuntime: runtime as! String, movieGenre: genre as! String, movieImageUrl: imageUrl as! String, movieListImages: listImages as! [String], movieListActors: actors , movieStarsActors: starsActors as! String, movieDirectors: directors as! String, movieStreamingApp: streamingApp as! String, movieTrailer: trailer as! String, movieRatings: ratings as? Double, movieNumVotes: (numVotes as! Int))
+            let data = Movie(movieIndex: index,movieTitleId: (titleId as! String) , movieTitle: (title as! String) , movieDescription: description as! String, movieInfoYear: releaseDate as! String, movieInfoRating: releaseDate as! String, movieInfoSeason: releaseDate as! String, movieRuntime: runtime as! String, movieGenre: genre as! String, movieImageUrl: imageUrl as! String, movieListImages: listImages as! [String], movieListActors: actors , movieStarsActors: starsActors as! String, movieDirectors: directors as! String, movieStreamingApp: streamingApp as! String, movieTrailer: trailer as! String, movieRatings: ratings as? String, movieNumVotes: (numVotes as! Int))
             
             //            print(data)
             arrOfDatas.append(data)
